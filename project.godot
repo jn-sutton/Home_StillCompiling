@@ -11,4 +11,9 @@ config_version=5
 [application]
 
 config/name="Home_StillCompiling_SoftwareEngineeringCapston"
+run/main_scene="uid://d2vxojr3niifh"
 config/features=PackedStringArray("4.5", "Forward Plus")
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
