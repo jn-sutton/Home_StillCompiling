@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bydoopthyy2u3"
-path="res://.godot/imported/beagle.png-f1ab0db79e7a4e7b137c513dbff8d967.ctex"
+uid="uid://b1e8283sixrjn"
+path="res://.godot/imported/beagle_sprite.png-40da2ab8c313ae0a0f65664e9359772c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/beagle.png"
-dest_files=["res://.godot/imported/beagle.png-f1ab0db79e7a4e7b137c513dbff8d967.ctex"]
+source_file="res://assets/sprites/beagle_sprite.png"
+dest_files=["res://.godot/imported/beagle_sprite.png-40da2ab8c313ae0a0f65664e9359772c.ctex"]
 
 [params]
 

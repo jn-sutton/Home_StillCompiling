@@ -5,16 +5,22 @@ extends Node2D
 @export var sprite : Sprite2D
 
 func _process(_delta):
-	# 1. Handle Sprite Flipping (as discussed before)
+	# Handle Sprite Flipping
 	if player_controller.direction != 0:
 		sprite.flip_h = (player_controller.direction == -1)
-
-	# 2. Handle Animation Switching
+	
+	# Handle Animation Switching
 	var target_anim = "idle" # Default
-	if player_controller.direction != 0:
+	
+	# Check if player is jumping 
+	if player_controller.velocity.y < 0:  # Moving upward = jumping
+		target_anim = "jumping"
+	elif player_controller.velocity.y > 0:  # Falling
+		target_anim = "falling" 
+	elif player_controller.direction != 0:  # Moving left or right
 		target_anim = "move"
-
+	# else it stays "idle"
+	
 	# ONLY call play if the current animation is different
-	# This prevents the animation from restarting every frame
 	if animation_player.current_animation != target_anim:
 		animation_player.play(target_anim)
