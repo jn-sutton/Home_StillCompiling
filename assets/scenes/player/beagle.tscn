@@ -1,0 +1,73 @@
+[gd_scene load_steps=7 format=3 uid="uid://b1x7f837f153v"]
+
+[ext_resource type="Script" uid="uid://dyn3sp4a1p1t1" path="res://assets/scripts/beagle_controller.gd" id="1_66irs"]
+[ext_resource type="Texture2D" uid="uid://bydoopthyy2u3" path="res://assets/sprites/beagle.png" id="1_yd7id"]
+
+[sub_resource type="Animation" id="Animation_66irs"]
+resource_name = "idle"
+length = 2.0
+loop_mode = 1
+step = 0.33
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AgentAnimator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.33950138, 0.34385395, 0.6637687, 1.0054463, 1.3362426, 1.6626862, 2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(7, 31.5, 39, 34), Rect2(54, 30.5, 39, 34), Rect2(54, 30.5, 39, 34), Rect2(93, 31.5, 39, 34), Rect2(135, 31.5, 39, 34), Rect2(178, 31.5, 39, 34), Rect2(222, 31.5, 39, 34), Rect2(222, 31.5, 39, 34)]
+}
+
+[sub_resource type="Animation" id="Animation_vxsu0"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("AgentAnimator/Sprite2D:region_rect")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(6, 31.5, 39, 34)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o8nn8"]
+_data = {
+&"RESET": SubResource("Animation_vxsu0"),
+&"idle": SubResource("Animation_66irs")
+}
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_66irs"]
+radius = 15.0
+height = 34.0
+
+[node name="Beagle" type="CharacterBody2D"]
+script = ExtResource("1_66irs")
+jump_power = 8.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+offset = Vector2(0, -15)
+zoom = Vector2(6, 6)
+
+[node name="AgentAnimator" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AgentAnimator"]
+root_node = NodePath("../..")
+libraries = {
+&"": SubResource("AnimationLibrary_o8nn8")
+}
+autoplay = "idle"
+
+[node name="Sprite2D" type="Sprite2D" parent="AgentAnimator"]
+position = Vector2(-3, 0)
+texture = ExtResource("1_yd7id")
+region_enabled = true
+region_rect = Rect2(6, 31.5, 39, 34)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_66irs")
