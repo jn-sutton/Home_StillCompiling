@@ -1,11 +1,12 @@
 extends CharacterBody2D
+class_name PlayerController
 
 #Exports so that we are able to change in the side bar to play with while
 #the game is open
-@export var speed = 300.0
+@export var speed = 200.0
 @export var jump_power = 10.0
 
-var speed_multiplier = 75.0
+var speed_multiplier = 60.0
 var jump_multiplier = -30.0
 var direction = 0
 
