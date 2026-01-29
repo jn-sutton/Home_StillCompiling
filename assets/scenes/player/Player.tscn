@@ -105,8 +105,8 @@ speed = 150.0
 jump_power = 8.0
 
 [node name="Camera2D" type="Camera2D" parent="."]
-offset = Vector2(0, -15)
-zoom = Vector2(6, 6)
+offset = Vector2(0, -45)
+zoom = Vector2(3, 3)
 
 [node name="PlayerAnimator" type="Node2D" parent="." node_paths=PackedStringArray("player_controller", "animation_player", "sprite")]
 script = ExtResource("2_x56rk")
