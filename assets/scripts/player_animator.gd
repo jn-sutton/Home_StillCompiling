@@ -19,7 +19,8 @@ func _process(_delta):
 		target_anim = "falling" 
 	elif player_controller.direction != 0:  # Moving left or right
 		target_anim = "move"
-	# else it stays "idle"
+	elif Input.is_action_pressed("sniff"): # While idle, checks if user is pressing "Q" for sniff action
+		target_anim = "sniff"
 	
 	# ONLY call play if the current animation is different
 	if animation_player.current_animation != target_anim:

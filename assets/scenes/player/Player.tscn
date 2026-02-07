@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b1x7f837f153v"]
+[gd_scene format=3 uid="uid://b1x7f837f153v"]
 
 [ext_resource type="Script" uid="uid://dyn3sp4a1p1t1" path="res://assets/scripts/player_controller.gd" id="1_gv7my"]
 [ext_resource type="Script" uid="uid://dp3khb1fhmjla" path="res://assets/scripts/player_animator.gd" id="2_x56rk"]
@@ -87,47 +87,63 @@ tracks/0/keys = {
 "values": [Rect2(6, 76.5, 39, 34), Rect2(51, 77.5, 39, 34), Rect2(97, 78.5, 39, 34), Rect2(144, 77.5, 39, 34), Rect2(190, 77.5, 39, 34), Rect2(234, 77.5, 39, 34), Rect2(279, 76.5, 39, 34), Rect2(234, 76.5, 39, 34)]
 }
 
+[sub_resource type="Animation" id="Animation_x56rk"]
+resource_name = "sniff"
+loop_mode = 1
+step = 0.25
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("PlayerAnimator/Sprite2D:region_rect")
+tracks/0/interp = 0
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25, 0.5, 0.75, 1),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Rect2(12.478622, 118.93287, 44.897972, 51.56025), Rect2(82.8328, 121.49968, 42.61177, 46.442047), Rect2(12.478622, 118.93287, 44.897972, 51.56025), Rect2(82.8328, 121.49968, 42.61177, 46.442047), Rect2(12.478622, 118.93287, 44.897972, 51.56025)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_o8nn8"]
 _data = {
 &"RESET": SubResource("Animation_vxsu0"),
 &"falling": SubResource("Animation_gv7my"),
 &"idle": SubResource("Animation_66irs"),
 &"jumping": SubResource("Animation_vpbwg"),
-&"move": SubResource("Animation_o8nn8")
+&"move": SubResource("Animation_o8nn8"),
+&"sniff": SubResource("Animation_x56rk")
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gv7my"]
-size = Vector2(35, 32)
+size = Vector2(35.75, 42.5)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" unique_id=55717367]
 script = ExtResource("1_gv7my")
 speed = 150.0
 jump_power = 8.0
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=937350869]
 offset = Vector2(0, -45)
 zoom = Vector2(3, 3)
 
-[node name="PlayerAnimator" type="Node2D" parent="." node_paths=PackedStringArray("player_controller", "animation_player", "sprite")]
+[node name="PlayerAnimator" type="Node2D" parent="." unique_id=273224406 node_paths=PackedStringArray("player_controller", "animation_player", "sprite")]
 script = ExtResource("2_x56rk")
 player_controller = NodePath("..")
 animation_player = NodePath("AnimationPlayer")
 sprite = NodePath("Sprite2D")
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerAnimator"]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="PlayerAnimator" unique_id=1181252621]
 root_node = NodePath("../..")
-libraries = {
-&"": SubResource("AnimationLibrary_o8nn8")
-}
-autoplay = "idle"
+libraries/ = SubResource("AnimationLibrary_o8nn8")
+autoplay = &"idle"
 
-[node name="Sprite2D" type="Sprite2D" parent="PlayerAnimator"]
-position = Vector2(-3.0000007, 0.42500043)
-scale = Vector2(0.9, 0.9)
+[node name="Sprite2D" type="Sprite2D" parent="PlayerAnimator" unique_id=1740744331]
+position = Vector2(-3.7750003, 2.0861626e-07)
+scale = Vector2(0.86025643, 0.9411764)
 texture = ExtResource("3_gv7my")
 region_enabled = true
 region_rect = Rect2(6, 31.5, 39, 34)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1619527697]
 position = Vector2(-4, 0)
 shape = SubResource("RectangleShape2D_gv7my")
