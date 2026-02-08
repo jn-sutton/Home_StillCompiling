@@ -11,7 +11,7 @@ var jump_multiplier = -30.0
 var direction = 0
 
 #const SPEED = 300.0
-#onst JUMP_VELOCITY = -400.0
+#const JUMP_VELOCITY = -400.0
 
 
 func _physics_process(delta: float) -> void:
