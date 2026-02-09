@@ -3,8 +3,6 @@
 [ext_resource type="Texture2D" uid="uid://d2cu7g5qsdwck" path="res://assets/sprites/backgrounds/1.png" id="1_idki1"]
 [ext_resource type="Script" uid="uid://cmw8uri3qde50" path="res://assets/scripts/main_menu.gd" id="1_qc2ct"]
 [ext_resource type="Texture2D" uid="uid://b65g17r8irhnh" path="res://assets/sprites/backgrounds/2.png" id="2_2wor7"]
-[ext_resource type="Texture2D" uid="uid://bndv0nb78ir3a" path="res://assets/sprites/backgrounds/4.png" id="2_m7bg5"]
-[ext_resource type="Texture2D" uid="uid://bembo8qjhqyig" path="res://assets/sprites/backgrounds/old_house.png" id="2_tgri5"]
 [ext_resource type="Texture2D" uid="uid://bs4bmv6xqlpy8" path="res://assets/sprites/backgrounds/3.png" id="3_56beb"]
 [ext_resource type="FontFile" uid="uid://b3h7cudd3fxp4" path="res://assets/fonts/Comfortaa-Bold.ttf" id="4_sp8qc"]
 [ext_resource type="FontFile" uid="uid://dmsifm0vkj7wf" path="res://assets/fonts/Comfortaa-Regular.ttf" id="5_qc2ct"]
@@ -25,7 +23,6 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("2_m7bg5")
 
 [node name="1" type="Sprite2D" parent="TextureRect" unique_id=257692811]
 position = Vector2(581.49994, 319.49997)
@@ -46,21 +43,6 @@ texture = ExtResource("3_56beb")
 position = Vector2(607.4999, -7.426939)
 scale = Vector2(1.1111112, 1.0771605)
 texture = ExtResource("3_56beb")
-
-[node name="OldHouse" type="Sprite2D" parent="TextureRect" unique_id=1735601891]
-position = Vector2(922.00006, 424)
-scale = Vector2(2.0225, 2.1300004)
-texture = ExtResource("2_tgri5")
-
-[node name="4" type="Sprite2D" parent="TextureRect" unique_id=1042817487]
-position = Vector2(863, 406)
-scale = Vector2(1.8304657, 1.5766629)
-texture = ExtResource("2_m7bg5")
-
-[node name="5" type="Sprite2D" parent="TextureRect" unique_id=1437200346]
-position = Vector2(-115, 391.00003)
-scale = Vector2(1.5696278, 1.7153217)
-texture = ExtResource("2_m7bg5")
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1787088073]
 layout_mode = 1
