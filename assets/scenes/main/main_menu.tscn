@@ -1,9 +1,79 @@
 [gd_scene format=3 uid="uid://dacwujuq0vqdm"]
 
-[node name="Control" type="Control" unique_id=1545980677]
+[ext_resource type="Texture2D" uid="uid://d2cu7g5qsdwck" path="res://assets/sprites/backgrounds/1.png" id="1_idki1"]
+[ext_resource type="Texture2D" uid="uid://b65g17r8irhnh" path="res://assets/sprites/backgrounds/2.png" id="2_2wor7"]
+[ext_resource type="Texture2D" uid="uid://bs4bmv6xqlpy8" path="res://assets/sprites/backgrounds/3.png" id="3_56beb"]
+
+[node name="main_menu" type="Control" unique_id=1545980677]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1948410459]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="1" type="Sprite2D" parent="TextureRect" unique_id=257692811]
+position = Vector2(581.49994, 319.49997)
+scale = Vector2(2.015625, 1.9722222)
+texture = ExtResource("1_idki1")
+
+[node name="2" type="Sprite2D" parent="TextureRect" unique_id=626660]
+position = Vector2(459.9999, 377.99997)
+scale = Vector2(1.5364584, 1.5401235)
+texture = ExtResource("2_2wor7")
+
+[node name="3" type="Sprite2D" parent="TextureRect" unique_id=1127469321]
+position = Vector2(317.99994, 457.99997)
+scale = Vector2(1.1111112, 1.0771605)
+texture = ExtResource("3_56beb")
+
+[node name="3" type="Sprite2D" parent="TextureRect/3" unique_id=11633]
+position = Vector2(607.4999, -7.426939)
+scale = Vector2(1.1111112, 1.0771605)
+texture = ExtResource("3_56beb")
+
+[node name="MarginContainer" type="MarginContainer" parent="." unique_id=1787088073]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer" unique_id=244704649]
+layout_mode = 2
+theme_override_constants/separation = 60
+
+[node name="Seperator" type="Control" parent="MarginContainer/VBoxContainer" unique_id=2021981999]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer/Seperator" unique_id=167690620]
+layout_mode = 0
+offset_top = 4.0
+offset_right = 1143.0
+offset_bottom = 121.0
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 64
+text = "HOME"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MarginContainer" unique_id=418349932]
+layout_mode = 2
+alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer" unique_id=2089806099]
+layout_mode = 2
+alignment = 1
