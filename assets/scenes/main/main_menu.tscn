@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bs4bmv6xqlpy8" path="res://assets/sprites/backgrounds/3.png" id="3_56beb"]
 [ext_resource type="FontFile" uid="uid://b3h7cudd3fxp4" path="res://assets/fonts/Comfortaa-Bold.ttf" id="4_sp8qc"]
 [ext_resource type="FontFile" uid="uid://dmsifm0vkj7wf" path="res://assets/fonts/Comfortaa-Regular.ttf" id="5_qc2ct"]
+[ext_resource type="AudioStream" uid="uid://bql7isqn7mydp" path="res://assets/audio/Time Flies _Clement Panchout _2016.wav" id="9_iqksk"]
 
 [node name="Main_Menu" type="Control" unique_id=1545980677]
 layout_mode = 3
@@ -118,3 +119,7 @@ layout_mode = 2
 theme_override_fonts/font = ExtResource("5_qc2ct")
 theme_override_font_sizes/font_size = 32
 text = "Exit Game"
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=408345217]
+stream = ExtResource("9_iqksk")
+autoplay = true
