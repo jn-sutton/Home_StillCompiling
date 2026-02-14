@@ -21,6 +21,8 @@ func _process(_delta):
 		target_anim = "move"
 	elif Input.is_action_pressed("sniff"): # While idle, checks if user is pressing "Q" for sniff action
 		target_anim = "sniff"
+	elif Input.is_action_pressed("dig"): # While idle, checks if user is pressing "S" for dig action
+		target_anim = "dig"
 	
 	# ONLY call play if the current animation is different
 	if animation_player.current_animation != target_anim:
