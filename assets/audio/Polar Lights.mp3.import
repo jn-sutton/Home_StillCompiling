@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cqhkowniersax"
+path="res://.godot/imported/Polar Lights.mp3-93a4cf20e2bc56a67bd77ff356b8174b.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Polar Lights.mp3"
+dest_files=["res://.godot/imported/Polar Lights.mp3-93a4cf20e2bc56a67bd77ff356b8174b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

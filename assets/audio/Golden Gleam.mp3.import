@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dccwfvocl2dsk"
+path="res://.godot/imported/Golden Gleam.mp3-3dde1c0bb16f5d4a47c469ccb0aa4b73.mp3str"
+
+[deps]
+
+source_file="res://assets/audio/Golden Gleam.mp3"
+dest_files=["res://.godot/imported/Golden Gleam.mp3-3dde1c0bb16f5d4a47c469ccb0aa4b73.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
