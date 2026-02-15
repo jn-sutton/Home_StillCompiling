@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://d2cu7g5qsdwck" path="res://assets/sprites/backgrounds/1.png" id="1_gfms1"]
 [ext_resource type="Texture2D" uid="uid://b65g17r8irhnh" path="res://assets/sprites/backgrounds/2.png" id="2_c2dqn"]
-[ext_resource type="PackedScene" uid="uid://b1x7f837f153v" path="res://assets/scenes/player/Player.tscn" id="3_3bfny"]
 [ext_resource type="Texture2D" uid="uid://bs4bmv6xqlpy8" path="res://assets/sprites/backgrounds/3.png" id="3_o1qqy"]
 [ext_resource type="Texture2D" uid="uid://bndv0nb78ir3a" path="res://assets/sprites/backgrounds/4.png" id="4_8f7av"]
 [ext_resource type="Texture2D" uid="uid://dk0dapb8ghcvw" path="res://assets/sprites/backgrounds/fence.png" id="4_o1qqy"]
@@ -1796,11 +1795,7 @@ tile_set = SubResource("TileSet_4kyv5")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=998989096]
 
-[node name="Beagle" parent="CharacterBody2D" unique_id=1332935796 instance=ExtResource("3_3bfny")]
-position = Vector2(220, 362)
-
 [node name="German_Shephard" parent="CharacterBody2D" unique_id=340627722 instance=ExtResource("9_lgo24")]
-visible = false
 position = Vector2(281, 369)
 
 [node name="Label" type="Label" parent="." unique_id=1137620481]
