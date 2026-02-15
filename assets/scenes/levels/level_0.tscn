@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bembo8qjhqyig" path="res://assets/sprites/backgrounds/old_house.png" id="5_c2dqn"]
 [ext_resource type="Texture2D" uid="uid://mn87hufcrs5d" path="res://assets/sprites/backgrounds/dig_mound_smells2.png" id="7_8f7av"]
 [ext_resource type="PackedScene" uid="uid://dbs53yaet2f1a" path="res://assets/scenes/player/German_Shephard_Breed.tscn" id="9_lgo24"]
+[ext_resource type="FontFile" uid="uid://c6aws4mhwc5y" path="res://assets/fonts/Comfortaa-SemiBold.ttf" id="9_w0ehu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lgo24"]
 texture = ExtResource("1_gfms1")
@@ -1798,25 +1799,32 @@ tile_set = SubResource("TileSet_4kyv5")
 [node name="German_Shephard" parent="CharacterBody2D" unique_id=340627722 instance=ExtResource("9_lgo24")]
 position = Vector2(281, 369)
 
-[node name="Label" type="Label" parent="." unique_id=1137620481]
-offset_left = 251.0
-offset_top = 198.0
-offset_right = 394.0
-offset_bottom = 247.0
+[node name="Instructions" type="Node2D" parent="." unique_id=2092460184]
+
+[node name="Label" type="Label" parent="Instructions" unique_id=1137620481]
+offset_left = 253.0
+offset_top = 264.0
+offset_right = 444.0
+offset_bottom = 313.0
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("9_w0ehu")
 text = "Press D to move forward
 A to move back "
 
-[node name="Label" type="Label" parent="Label" unique_id=2089648698]
-layout_mode = 0
-offset_left = 981.0
-offset_top = 200.0
-offset_right = 1168.0
-offset_bottom = 223.0
-text = "Press Space Bar to jump"
-
-[node name="Label2" type="Label" parent="." unique_id=1821343003]
+[node name="Label2" type="Label" parent="Instructions" unique_id=1821343003]
 offset_left = 1492.0
 offset_top = 391.0
 offset_right = 1703.0
 offset_bottom = 414.0
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("9_w0ehu")
 text = "Press Q to sniff and S to dig"
+
+[node name="Label3" type="Label" parent="Instructions" unique_id=2089648698]
+offset_left = 1232.0
+offset_top = 398.0
+offset_right = 1419.0
+offset_bottom = 421.0
+theme_override_constants/outline_size = 3
+theme_override_fonts/font = ExtResource("9_w0ehu")
+text = "Press Space Bar to jump"
