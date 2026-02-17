@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ceq21ksgm6l8k"
-path="res://.godot/imported/gnome_walk_0.png-3875d0fa09e5a39cef2f67ed11ab93b0.ctex"
+uid="uid://b6cp8wvr2s611"
+path="res://.godot/imported/dog_idle_strip8.png-2ef7fc5472888e4213df0e5ad321cf29.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/gnome_walk_0.png"
-dest_files=["res://.godot/imported/gnome_walk_0.png-3875d0fa09e5a39cef2f67ed11ab93b0.ctex"]
+source_file="res://assets/sprites/players/german_shephard/dog_idle_strip8.png"
+dest_files=["res://.godot/imported/dog_idle_strip8.png-2ef7fc5472888e4213df0e5ad321cf29.ctex"]
 
 [params]
 

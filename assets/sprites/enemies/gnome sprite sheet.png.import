@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cumlw14u5jmbp"
-path="res://.godot/imported/dog_land_strip3.png-0fb5688af5e78e94b991c2256d21e94a.ctex"
+uid="uid://brvi1ob1safd1"
+path="res://.godot/imported/gnome sprite sheet.png-38425dae7ff8f516e43d16e50d5f3239.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/german_shephard/dog_land_strip3.png"
-dest_files=["res://.godot/imported/dog_land_strip3.png-0fb5688af5e78e94b991c2256d21e94a.ctex"]
+source_file="res://assets/sprites/enemies/gnome sprite sheet.png"
+dest_files=["res://.godot/imported/gnome sprite sheet.png-38425dae7ff8f516e43d16e50d5f3239.ctex"]
 
 [params]
 

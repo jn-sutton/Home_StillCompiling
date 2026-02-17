@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cs5h03cfmv5bg"
-path="res://.godot/imported/beagle_sprite.png-0ba48264bfd310332f0ced1b77050cd6.ctex"
+uid="uid://bbghhwnv185kj"
+path="res://.godot/imported/gnome_walk_3.png-f931bc1026deeca875b7c4905ddb9ede.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/beagle/beagle_sprite.png"
-dest_files=["res://.godot/imported/beagle_sprite.png-0ba48264bfd310332f0ced1b77050cd6.ctex"]
+source_file="res://assets/sprites/enemies/gnome_walk_3.png"
+dest_files=["res://.godot/imported/gnome_walk_3.png-f931bc1026deeca875b7c4905ddb9ede.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dg1qrl5gks3q4"
-path="res://.godot/imported/gnome_walk_2.png-b44244ca23bea58667ffd75940fe2858.ctex"
+uid="uid://dstchwyjay0bv"
+path="res://.godot/imported/dog_fly_strip6.png-c1fe332c8ed09ed186fff46267ab928c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/gnome_walk_2.png"
-dest_files=["res://.godot/imported/gnome_walk_2.png-b44244ca23bea58667ffd75940fe2858.ctex"]
+source_file="res://assets/sprites/players/german_shephard/dog_fly_strip6.png"
+dest_files=["res://.godot/imported/dog_fly_strip6.png-c1fe332c8ed09ed186fff46267ab928c.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fyrejovllof4"
-path="res://.godot/imported/dog_fright_strip2.png-41e196789eabdb62326a9d34e66b3174.ctex"
+uid="uid://he8uc5y6sc8m"
+path="res://.godot/imported/dog_wallgrab_strip8.png-5d721b8d3ff45c7da6d6c031edc3dce8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/german_shephard/dog_fright_strip2.png"
-dest_files=["res://.godot/imported/dog_fright_strip2.png-41e196789eabdb62326a9d34e66b3174.ctex"]
+source_file="res://assets/sprites/players/german_shephard/dog_wallgrab_strip8.png"
+dest_files=["res://.godot/imported/dog_wallgrab_strip8.png-5d721b8d3ff45c7da6d6c031edc3dce8.ctex"]
 
 [params]
 

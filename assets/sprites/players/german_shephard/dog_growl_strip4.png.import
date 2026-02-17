@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dx7v0i75m4rot"
-path="res://.godot/imported/dog_hurt_strip7.png-839e0e9134d1dd65dec99065f3b20d2c.ctex"
+uid="uid://d2rejb5gr5ckw"
+path="res://.godot/imported/dog_growl_strip4.png-908f2dd82695ff23a6522e6be4447fb4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/german_shephard/dog_hurt_strip7.png"
-dest_files=["res://.godot/imported/dog_hurt_strip7.png-839e0e9134d1dd65dec99065f3b20d2c.ctex"]
+source_file="res://assets/sprites/players/german_shephard/dog_growl_strip4.png"
+dest_files=["res://.godot/imported/dog_growl_strip4.png-908f2dd82695ff23a6522e6be4447fb4.ctex"]
 
 [params]
 

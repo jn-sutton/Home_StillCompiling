@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bfumjtrf4nxl6"
-path="res://.godot/imported/dog_crouch_strip8.png-e210646c047be365f23f8876696cc794.ctex"
+uid="uid://dg1qrl5gks3q4"
+path="res://.godot/imported/gnome_walk_2.png-9be34ce408d2ec0fb154cf951f10da5c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/german_shephard/dog_crouch_strip8.png"
-dest_files=["res://.godot/imported/dog_crouch_strip8.png-e210646c047be365f23f8876696cc794.ctex"]
+source_file="res://assets/sprites/enemies/gnome_walk_2.png"
+dest_files=["res://.godot/imported/gnome_walk_2.png-9be34ce408d2ec0fb154cf951f10da5c.ctex"]
 
 [params]
 

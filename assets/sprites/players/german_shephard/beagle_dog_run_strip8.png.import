@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de7arxhkthydg"
-path="res://.godot/imported/dog_bark_strip6.png-52abc531a91fc3b3b060b000e5e4a3da.ctex"
+uid="uid://bgwye53laukkv"
+path="res://.godot/imported/beagle_dog_run_strip8.png-bfe45c34b2ee2fb0e996e7838ea5a1f5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/german_shephard/dog_bark_strip6.png"
-dest_files=["res://.godot/imported/dog_bark_strip6.png-52abc531a91fc3b3b060b000e5e4a3da.ctex"]
+source_file="res://assets/sprites/players/german_shephard/beagle_dog_run_strip8.png"
+dest_files=["res://.godot/imported/beagle_dog_run_strip8.png-bfe45c34b2ee2fb0e996e7838ea5a1f5.ctex"]
 
 [params]
 

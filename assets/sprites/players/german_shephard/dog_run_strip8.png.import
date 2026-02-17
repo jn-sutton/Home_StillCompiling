@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ckn238f7eplg4"
-path="res://.godot/imported/dog_attack_strip7.png-a8ed97f5ac51fa90e30335a925f60b61.ctex"
+uid="uid://bbb051ai7yo2h"
+path="res://.godot/imported/dog_run_strip8.png-8dad76602e077c72087968dd0245aac1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/german_shephard/dog_attack_strip7.png"
-dest_files=["res://.godot/imported/dog_attack_strip7.png-a8ed97f5ac51fa90e30335a925f60b61.ctex"]
+source_file="res://assets/sprites/players/german_shephard/dog_run_strip8.png"
+dest_files=["res://.godot/imported/dog_run_strip8.png-8dad76602e077c72087968dd0245aac1.ctex"]
 
 [params]
 

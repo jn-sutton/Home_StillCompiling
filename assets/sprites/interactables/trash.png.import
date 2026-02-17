@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b6cp8wvr2s611"
-path="res://.godot/imported/dog_idle_strip8.png-1f7aad1f31fcbf71a5362d6d7e058479.ctex"
+uid="uid://ctf6eotdgwisr"
+path="res://.godot/imported/trash.png-d1210a34cfcdd659b26f0826a5f72639.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/german_shephard/dog_idle_strip8.png"
-dest_files=["res://.godot/imported/dog_idle_strip8.png-1f7aad1f31fcbf71a5362d6d7e058479.ctex"]
+source_file="res://assets/sprites/interactables/trash.png"
+dest_files=["res://.godot/imported/trash.png-d1210a34cfcdd659b26f0826a5f72639.ctex"]
 
 [params]
 

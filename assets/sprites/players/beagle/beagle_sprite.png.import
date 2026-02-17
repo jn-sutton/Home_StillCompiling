@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qpbpn5lioweh"
-path="res://.godot/imported/dog_jump_strip8.png-5a13eb2b145b9e9c111dc44469526e4f.ctex"
+uid="uid://cs5h03cfmv5bg"
+path="res://.godot/imported/beagle_sprite.png-fe0fb1241c57cab4b778ac4d8b7af33a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/german_shephard/dog_jump_strip8.png"
-dest_files=["res://.godot/imported/dog_jump_strip8.png-5a13eb2b145b9e9c111dc44469526e4f.ctex"]
+source_file="res://assets/sprites/players/beagle/beagle_sprite.png"
+dest_files=["res://.godot/imported/beagle_sprite.png-fe0fb1241c57cab4b778ac4d8b7af33a.ctex"]
 
 [params]
 

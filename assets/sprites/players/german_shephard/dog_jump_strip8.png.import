@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://brvi1ob1safd1"
-path="res://.godot/imported/gnome sprite sheet.png-d96ac16aa89d516b2ff102fa0ea42b91.ctex"
+uid="uid://qpbpn5lioweh"
+path="res://.godot/imported/dog_jump_strip8.png-21af2e579f1e13b4d66d9262518db3b1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/gnome sprite sheet.png"
-dest_files=["res://.godot/imported/gnome sprite sheet.png-d96ac16aa89d516b2ff102fa0ea42b91.ctex"]
+source_file="res://assets/sprites/players/german_shephard/dog_jump_strip8.png"
+dest_files=["res://.godot/imported/dog_jump_strip8.png-21af2e579f1e13b4d66d9262518db3b1.ctex"]
 
 [params]
 
