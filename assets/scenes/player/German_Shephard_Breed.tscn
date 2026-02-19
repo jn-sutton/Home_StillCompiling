@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://dxmns8e111ieb" path="res://assets/sprites/players/german_shephard/dog_die_strip8.png" id="4_ep8yc"]
 [ext_resource type="Texture2D" uid="uid://bwkumkgiru013" path="res://assets/sprites/players/german_shephard/dog_fall_strip5.png" id="5_iji8k"]
 [ext_resource type="Texture2D" uid="uid://dx7v0i75m4rot" path="res://assets/sprites/players/german_shephard/dog_hurt_strip7.png" id="6_6wpi6"]
+[ext_resource type="Texture2D" uid="uid://tgyicks1pnad" path="res://assets/sprites/players/german_shephard/dog_dig_strip.png" id="7_ep8yc"]
 [ext_resource type="Texture2D" uid="uid://qpbpn5lioweh" path="res://assets/sprites/players/german_shephard/dog_jump_strip8.png" id="7_na6hn"]
 [ext_resource type="Texture2D" uid="uid://cumlw14u5jmbp" path="res://assets/sprites/players/german_shephard/dog_land_strip3.png" id="8_vp0vi"]
 [ext_resource type="Texture2D" uid="uid://bbb051ai7yo2h" path="res://assets/sprites/players/german_shephard/dog_run_strip8.png" id="9_g7w7r"]
@@ -274,6 +275,69 @@ tracks/4/keys = {
 
 [sub_resource type="Animation" id="Animation_dwyke"]
 resource_name = "dig"
+length = 0.8
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("7_ep8yc")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-2, -2)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:frame")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7]
+}
 
 [sub_resource type="Animation" id="Animation_dx8q6"]
 resource_name = "fall"
