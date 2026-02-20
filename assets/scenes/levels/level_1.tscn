@@ -1,3 +1,62 @@
 [gd_scene format=3 uid="uid://b6c27frxvblwd"]
 
+[ext_resource type="Script" uid="uid://dd3dtib1571up" path="res://assets/scripts/enemy.gd" id="1_n07sh"]
+[ext_resource type="Texture2D" uid="uid://brvi1ob1safd1" path="res://assets/sprites/enemies/gnome sprite sheet.png" id="2_n07sh"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivb3n"]
+size = Vector2(26, 39)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m0dby"]
+atlas = ExtResource("2_n07sh")
+region = Rect2(0, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ivb3n"]
+atlas = ExtResource("2_n07sh")
+region = Rect2(46, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ugeu"]
+atlas = ExtResource("2_n07sh")
+region = Rect2(92, 0, 46, 46)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_28bgd"]
+atlas = ExtResource("2_n07sh")
+region = Rect2(138, 0, 46, 46)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_u4b5a"]
+animations = [{
+"frames": [],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m0dby")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ivb3n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ugeu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_28bgd")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
 [node name="Level1" type="Node2D" unique_id=2039850224]
+
+[node name="GnomeEnemy" type="CharacterBody2D" parent="." unique_id=620659868]
+script = ExtResource("1_n07sh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GnomeEnemy" unique_id=803754552]
+position = Vector2(-1, 0.5)
+shape = SubResource("RectangleShape2D_ivb3n")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GnomeEnemy" unique_id=1968970386]
+sprite_frames = SubResource("SpriteFrames_u4b5a")
+animation = &"walk"
+frame_progress = 0.0115885865
