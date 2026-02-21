@@ -817,13 +817,13 @@ _data = {
 }
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tr0ro"]
-size = Vector2(36, 20)
+size = Vector2(23.5, 20)
 
 [node name="German_Shephard" type="CharacterBody2D" unique_id=340627722]
 script = ExtResource("1_idkry")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1884352731]
-offset = Vector2(0, -60)
+offset = Vector2(0, -10)
 zoom = Vector2(3, 3)
 
 [node name="PlayerAnimator" type="Node2D" parent="." unique_id=1968166114 node_paths=PackedStringArray("player_controller", "animation_player", "sprite")]
@@ -841,4 +841,5 @@ texture = ExtResource("1_6ijai")
 hframes = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=690020783]
+position = Vector2(0.25, 0)
 shape = SubResource("RectangleShape2D_tr0ro")
