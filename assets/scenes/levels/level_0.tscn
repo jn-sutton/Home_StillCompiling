@@ -1795,9 +1795,11 @@ tile_map_data = PackedByteArray("AAAAABUAAAAAAA4AAAAAABYAAAAAAA8AAAAAABcAAAAAABA
 tile_set = SubResource("TileSet_4kyv5")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=998989096]
+collision_mask = 768
 
 [node name="German_Shephard" parent="CharacterBody2D" unique_id=340627722 instance=ExtResource("9_lgo24")]
 position = Vector2(281, 369)
+collision_mask = 768
 
 [node name="Instructions" type="Node2D" parent="." unique_id=2092460184]
 
