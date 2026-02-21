@@ -1,15 +1,122 @@
 [gd_scene format=3 uid="uid://dacwujuq0vqdm"]
 
-[ext_resource type="Texture2D" uid="uid://d2cu7g5qsdwck" path="res://assets/sprites/backgrounds/1.png" id="1_idki1"]
 [ext_resource type="Script" uid="uid://cmw8uri3qde50" path="res://assets/scripts/main_menu.gd" id="1_qc2ct"]
-[ext_resource type="Texture2D" uid="uid://b65g17r8irhnh" path="res://assets/sprites/backgrounds/2.png" id="2_2wor7"]
-[ext_resource type="Texture2D" uid="uid://bndv0nb78ir3a" path="res://assets/sprites/backgrounds/4.png" id="2_m7bg5"]
-[ext_resource type="Texture2D" uid="uid://bembo8qjhqyig" path="res://assets/sprites/backgrounds/old_house.png" id="2_tgri5"]
-[ext_resource type="Texture2D" uid="uid://bs4bmv6xqlpy8" path="res://assets/sprites/backgrounds/3.png" id="3_56beb"]
+[ext_resource type="Texture2D" uid="uid://dvxfmhq55ld14" path="res://assets/sprites/backgrounds/title_screen-Sheet_packed.png" id="2_tdsuy"]
 [ext_resource type="FontFile" uid="uid://b3h7cudd3fxp4" path="res://assets/fonts/Comfortaa-Bold.ttf" id="4_sp8qc"]
 [ext_resource type="FontFile" uid="uid://dmsifm0vkj7wf" path="res://assets/fonts/Comfortaa-Regular.ttf" id="5_qc2ct"]
 [ext_resource type="AudioStream" uid="uid://bql7isqn7mydp" path="res://assets/audio/Time Flies _Clement Panchout _2016.wav" id="9_iqksk"]
 [ext_resource type="PackedScene" uid="uid://bpxyxaru4gg20" path="res://assets/scenes/main/Options_Menu/options_menu.tscn" id="10_qhx0u"]
+
+[sub_resource type="Animation" id="Animation_ewwgg"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_tdsuy")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_ehgd7"]
+resource_name = "background"
+length = 15.0
+loop_mode = 1
+step = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_tdsuy")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [8]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [7]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6, 0.90000004, 1.2, 1.5, 1.8000001, 2.1000001, 2.4, 2.7, 3, 3.3000002, 3.6000001, 3.9, 4.2000003, 4.5, 4.8, 5.1000004, 5.4, 5.7000003, 6, 6.3, 6.6000004, 6.9, 7.2000003, 7.5000005, 7.8, 8.1, 8.400001, 8.700001, 9, 9.3, 9.6, 9.900001, 10.200001, 10.5, 10.8, 11.1, 11.400001, 11.700001, 12, 12.3, 12.6, 12.900001, 13.200001, 13.500001, 13.8, 14.1, 14.400001, 14.700001),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1sxyb"]
+_data = {
+&"RESET": SubResource("Animation_ewwgg"),
+&"background": SubResource("Animation_ehgd7")
+}
 
 [node name="Main_Menu" type="Control" unique_id=1545980677]
 layout_mode = 3
@@ -20,49 +127,15 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qc2ct")
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1948410459]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_m7bg5")
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2120291835]
+position = Vector2(570, 325)
+texture = ExtResource("2_tdsuy")
+hframes = 8
+vframes = 7
 
-[node name="1" type="Sprite2D" parent="TextureRect" unique_id=257692811]
-position = Vector2(581.49994, 319.49997)
-scale = Vector2(2.015625, 1.9722222)
-texture = ExtResource("1_idki1")
-
-[node name="2" type="Sprite2D" parent="TextureRect" unique_id=626660]
-position = Vector2(459.9999, 377.99997)
-scale = Vector2(1.5364584, 1.5401235)
-texture = ExtResource("2_2wor7")
-
-[node name="3" type="Sprite2D" parent="TextureRect" unique_id=1127469321]
-position = Vector2(317.99994, 457.99997)
-scale = Vector2(1.1111112, 1.0771605)
-texture = ExtResource("3_56beb")
-
-[node name="3" type="Sprite2D" parent="TextureRect/3" unique_id=11633]
-position = Vector2(607.4999, -7.426939)
-scale = Vector2(1.1111112, 1.0771605)
-texture = ExtResource("3_56beb")
-
-[node name="OldHouse" type="Sprite2D" parent="TextureRect" unique_id=1735601891]
-position = Vector2(922.00006, 424)
-scale = Vector2(2.0225, 2.1300004)
-texture = ExtResource("2_tgri5")
-
-[node name="4" type="Sprite2D" parent="TextureRect" unique_id=1042817487]
-position = Vector2(863, 406)
-scale = Vector2(1.8304657, 1.5766629)
-texture = ExtResource("2_m7bg5")
-
-[node name="5" type="Sprite2D" parent="TextureRect" unique_id=1437200346]
-position = Vector2(-115, 391.00003)
-scale = Vector2(1.5696278, 1.7153217)
-texture = ExtResource("2_m7bg5")
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Sprite2D" unique_id=1277074802]
+libraries/ = SubResource("AnimationLibrary_1sxyb")
+autoplay = &"background"
 
 [node name="MarginContainer" type="MarginContainer" parent="." unique_id=1787088073]
 layout_mode = 1
