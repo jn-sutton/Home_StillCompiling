@@ -1798,7 +1798,7 @@ tile_set = SubResource("TileSet_4kyv5")
 collision_mask = 768
 
 [node name="German_Shephard" parent="CharacterBody2D" unique_id=340627722 instance=ExtResource("9_lgo24")]
-position = Vector2(281, 369)
+position = Vector2(273, 371)
 collision_mask = 768
 
 [node name="Instructions" type="Node2D" parent="." unique_id=2092460184]

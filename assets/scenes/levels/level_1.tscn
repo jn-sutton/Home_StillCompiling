@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://dd3dtib1571up" path="res://assets/scripts/enemy.gd" id="1_n07sh"]
 [ext_resource type="Texture2D" uid="uid://brvi1ob1safd1" path="res://assets/sprites/enemies/gnome sprite sheet.png" id="2_n07sh"]
 [ext_resource type="Texture2D" uid="uid://di71wu7p5o6ha" path="res://assets/sprites/backgrounds/tiles_1 (1).png" id="4_28bgd"]
-[ext_resource type="PackedScene" uid="uid://b0vawf4i0ken8" path="res://assets/scenes/main/moving_platform_large.tscn" id="5_28bgd"]
+[ext_resource type="PackedScene" path="res://assets/scenes/main/moving_platform_large.tscn" id="5_28bgd"]
 [ext_resource type="PackedScene" uid="uid://dbs53yaet2f1a" path="res://assets/scenes/player/German_Shephard_Breed.tscn" id="5_u4b5a"]
 [ext_resource type="Texture2D" uid="uid://dsnbydqkj63wb" path="res://assets/sprites/backgrounds/Vegetation.png" id="7_u4b5a"]
 

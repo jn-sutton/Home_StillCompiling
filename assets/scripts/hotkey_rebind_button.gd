@@ -11,7 +11,7 @@ extends Control
 func _ready():
 	set_process_unhandled_key_input(false)
 	set_action_name()
-
+	set_text_for_key()
 
 func set_action_name() -> void:
 	label.text = "Unassigned"
@@ -24,3 +24,9 @@ func set_action_name() -> void:
 			label.text = "Move Right"
 		"jump":
 			label.text = "Jump"
+
+func set_text_for_key() -> void:
+	var action_events = InputMap.action_get_events(action_name)
+	var action_event = action_events[0]
+	
+	
