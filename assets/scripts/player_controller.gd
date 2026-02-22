@@ -42,10 +42,12 @@ func _input(event):
 			
 		# This if statement checks to see if the player has sniffed next to the dirt mound and
 		# reveals the mound to the player if so.
+		"""
 		if event.is_action_pressed("sniff"):
-			var distance = global_position.distance_to(dirt_mound.global_position)
+q			var distance = global_position.distance_to(dirt_mound.global_position)
 			if distance <= sniff_range:
 				dirt_mound.visible = true
+		"""
 		"""
 		if dirt_mound.visible == true:
 			var distance = global_position.distance_to(dirt_mound.global_position)

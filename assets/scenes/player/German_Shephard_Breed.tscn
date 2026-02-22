@@ -823,7 +823,7 @@ size = Vector2(23.5, 20)
 script = ExtResource("1_idkry")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1884352731]
-offset = Vector2(0, -10)
+offset = Vector2(0, -50)
 zoom = Vector2(3, 3)
 
 [node name="PlayerAnimator" type="Node2D" parent="." unique_id=1968166114 node_paths=PackedStringArray("player_controller", "animation_player", "sprite")]
