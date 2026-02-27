@@ -778,6 +778,9 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_u4b5a"]
+size = Vector2(26, 41)
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_7bgev"]
 texture = ExtResource("4_28bgd")
 0:0/0 = 0
@@ -869,7 +872,7 @@ physics_layer_2/collision_layer = 1024
 physics_layer_3/collision_layer = 2048
 sources/0 = SubResource("TileSetAtlasSource_7bgev")
 
-[sub_resource type="Curve2D" id="Curve2D_u4b5a"]
+[sub_resource type="Curve2D" id="Curve2D_sfv5u"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 398, -136, 0, 0, 0, 0, 568, -136)
@@ -883,18 +886,25 @@ tile_map_data = PackedByteArray("AAD2/+v/AAAAAAAAAAD2/+z/AAAAAAEAAAD2/+3/AAAAAAI
 tile_set = SubResource("TileSet_hxl67")
 
 [node name="GnomeEnemy" type="CharacterBody2D" parent="." unique_id=620659868]
-collision_mask = 1792
+collision_mask = 1794
 script = ExtResource("1_n07sh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GnomeEnemy" unique_id=803754552]
-position = Vector2(366, -37)
+position = Vector2(470, -35)
 shape = SubResource("RectangleShape2D_ivb3n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GnomeEnemy" unique_id=1968970386]
-position = Vector2(367, -37)
+position = Vector2(470, -35)
 sprite_frames = SubResource("SpriteFrames_u4b5a")
 animation = &"walk"
 frame_progress = 0.0115885865
+
+[node name="Area2D" type="Area2D" parent="GnomeEnemy" unique_id=849659569]
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GnomeEnemy/Area2D" unique_id=2071285626]
+position = Vector2(470, -36)
+shape = SubResource("RectangleShape2D_u4b5a")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=2008081796]
 tile_set = SubResource("TileSet_512vt")
@@ -903,10 +913,10 @@ layer_0/tile_data = PackedInt32Array(-3, 65536, 0, -2, 65536, 0, -1, 65536, 0, -
 
 [node name="MovingPlatformLarge" parent="." unique_id=2008875506 instance=ExtResource("5_28bgd")]
 position = Vector2(-13, 11)
-curve = SubResource("Curve2D_u4b5a")
+curve = SubResource("Curve2D_sfv5u")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=123632424]
-collision_mask = 1792
+collision_mask = 1794
 
 [node name="German_Shephard" parent="CharacterBody2D" unique_id=340627722 instance=ExtResource("5_u4b5a")]
 position = Vector2(-38, -26)
@@ -917,6 +927,7 @@ wait_time = 2.0
 one_shot = true
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1949598792]
+position = Vector2(0, 1)
 
 [node name="bush1" type="Sprite2D" parent="StaticBody2D3" unique_id=50296335]
 visible = false
@@ -925,3 +936,5 @@ scale = Vector2(-1.5523732, 0.5112734)
 texture = ExtResource("7_u4b5a")
 region_enabled = true
 region_rect = Rect2(48.499683, 4.8727045, 31.360355, 27.769478)
+
+[connection signal="body_entered" from="GnomeEnemy/Area2D" to="GnomeEnemy" method="_on_area_2d_body_entered"]
