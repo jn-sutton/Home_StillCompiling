@@ -2,6 +2,7 @@
 
 [ext_resource type="PackedScene" uid="uid://qm6x0agckifn" path="res://assets/scenes/levels/level_base.tscn" id="1_new3k"]
 [ext_resource type="Texture2D" uid="uid://d2cu7g5qsdwck" path="res://assets/sprites/backgrounds/level0/1.png" id="2_2txoy"]
+[ext_resource type="Script" uid="uid://bpivr5svm82u" path="res://assets/scripts/level_tutorial.gd" id="2_l8tlc"]
 [ext_resource type="Texture2D" uid="uid://bewrwavn4jcut" path="res://assets/sprites/backgrounds/level0/2.png" id="3_l8tlc"]
 [ext_resource type="Texture2D" uid="uid://ct1rwekow7hen" path="res://assets/sprites/backgrounds/level0/3.png" id="4_ps231"]
 [ext_resource type="Texture2D" uid="uid://bndv0nb78ir3a" path="res://assets/sprites/backgrounds/level0/4.png" id="5_swba5"]
@@ -38,6 +39,7 @@ size = Vector2(36, 27)
 size = Vector2(6.5373535, 73.75303)
 
 [node name="level_tutorial" unique_id=99358585 instance=ExtResource("1_new3k")]
+script = ExtResource("2_l8tlc")
 
 [node name="Environment" type="Node2D" parent="." index="0" unique_id=1304322158]
 
