@@ -1,8 +1,10 @@
 [gd_scene format=3 uid="uid://n0s6gq6jq0kg"]
 
 [ext_resource type="Texture2D" uid="uid://kvtx3llbkolt" path="res://assets/sprites/backgrounds/menu_cut_scenes/opening_scene.png" id="1_u2xsa"]
+[ext_resource type="Script" uid="uid://dm8mjejw4g1gr" path="res://assets/scripts/opening_scene.gd" id="1_xe3pj"]
 
 [node name="opening_scene" type="Node2D" unique_id=1206004074]
+script = ExtResource("1_xe3pj")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1925457288]
 offset_left = -330.0

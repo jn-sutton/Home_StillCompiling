@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bpxyxaru4gg20"]
 
 [ext_resource type="FontFile" uid="uid://c6aws4mhwc5y" path="res://assets/fonts/Comfortaa-SemiBold.ttf" id="1_0xc8m"]
-[ext_resource type="Script" uid="uid://co8syxnt3266t" path="res://assets/scripts/options_menu.gd" id="1_vncka"]
+[ext_resource type="Script" uid="uid://co8syxnt3266t" path="res://assets/scripts/main_menu/options_menu.gd" id="1_vncka"]
 [ext_resource type="FontFile" uid="uid://dmsifm0vkj7wf" path="res://assets/fonts/Comfortaa-Regular.ttf" id="2_hhtuw"]
 [ext_resource type="PackedScene" uid="uid://jisqf8g7tqiv" path="res://assets/scenes/main/Options_Menu/settings_tab_container.tscn" id="3_vx60g"]
 

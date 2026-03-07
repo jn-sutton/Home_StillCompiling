@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://qm6x0agckifn"]
+
+[ext_resource type="Script" uid="uid://7i1tpmfqlrag" path="res://assets/scripts/levels/level_base.gd" id="1_futo3"]
+[ext_resource type="PackedScene" uid="uid://dbs53yaet2f1a" path="res://assets/scenes/player/German_Shephard_Breed.tscn" id="2_8gk2r"]
+
+[node name="level_base" type="Node2D" unique_id=99358585]
+script = ExtResource("1_futo3")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=165516391]
+
+[node name="German_Shephard" parent="CharacterBody2D" unique_id=340627722 instance=ExtResource("2_8gk2r")]
+position = Vector2(0, 5)
+
+[node name="level_exit" type="Area2D" parent="." unique_id=1013683849]
