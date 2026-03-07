@@ -872,7 +872,7 @@ physics_layer_2/collision_layer = 1024
 physics_layer_3/collision_layer = 2048
 sources/0 = SubResource("TileSetAtlasSource_7bgev")
 
-[sub_resource type="Curve2D" id="Curve2D_sfv5u"]
+[sub_resource type="Curve2D" id="Curve2D_u4b5a"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 398, -136, 0, 0, 0, 0, 568, -136)
@@ -890,7 +890,7 @@ collision_mask = 1794
 script = ExtResource("1_n07sh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GnomeEnemy" unique_id=803754552]
-position = Vector2(470, -35)
+position = Vector2(469, -35)
 shape = SubResource("RectangleShape2D_ivb3n")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="GnomeEnemy" unique_id=1968970386]
@@ -900,10 +900,10 @@ animation = &"walk"
 frame_progress = 0.0115885865
 
 [node name="Area2D" type="Area2D" parent="GnomeEnemy" unique_id=849659569]
-collision_mask = 2
+collision_layer = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GnomeEnemy/Area2D" unique_id=2071285626]
-position = Vector2(470, -36)
+position = Vector2(469, -35)
 shape = SubResource("RectangleShape2D_u4b5a")
 
 [node name="TileMap" type="TileMap" parent="." unique_id=2008081796]
@@ -913,7 +913,7 @@ layer_0/tile_data = PackedInt32Array(-3, 65536, 0, -2, 65536, 0, -1, 65536, 0, -
 
 [node name="MovingPlatformLarge" parent="." unique_id=2008875506 instance=ExtResource("5_28bgd")]
 position = Vector2(-13, 11)
-curve = SubResource("Curve2D_sfv5u")
+curve = SubResource("Curve2D_u4b5a")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=123632424]
 collision_mask = 1794

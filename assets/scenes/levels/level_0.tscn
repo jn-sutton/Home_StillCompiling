@@ -191,3 +191,11 @@ offset_bottom = 375.0
 theme_override_constants/outline_size = 3
 theme_override_fonts/font = ExtResource("9_w0ehu")
 text = "Press B to bark"
+
+[node name="Bird" type="Node2D" parent="." unique_id=1861499134]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Bird" unique_id=1965959626]
+
+[node name="Area2D" type="Area2D" parent="Bird" unique_id=2108570794]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bird/Area2D" unique_id=1251409932]
