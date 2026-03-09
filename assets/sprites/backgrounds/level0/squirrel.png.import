@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bwsptvtr1xqou"
-path="res://.godot/imported/fish_sign.png-ecb93aff9bbc55ea0bdbd9c1982a0232.ctex"
+uid="uid://biom4lb6p4j60"
+path="res://.godot/imported/squirrel.png-9ac4da7c46fa6593e5e8e43e0dc15875.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/backgrounds/menu_cut_scenes/fish_sign.png"
-dest_files=["res://.godot/imported/fish_sign.png-ecb93aff9bbc55ea0bdbd9c1982a0232.ctex"]
+source_file="res://assets/sprites/backgrounds/level0/squirrel.png"
+dest_files=["res://.godot/imported/squirrel.png-9ac4da7c46fa6593e5e8e43e0dc15875.ctex"]
 
 [params]
 

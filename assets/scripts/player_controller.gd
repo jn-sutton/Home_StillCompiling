@@ -17,10 +17,10 @@ func _input(event):
 	if event.is_action_pressed("jump") and is_on_floor():
 		velocity.y = jump_power * jump_multiplier
 	
-	if event.is_action_pressed("sniff"):
+	if event.is_action_pressed("sniff") and is_on_floor():
 		sniffed.emit()
 	
-	if event.is_action_pressed("dig"):
+	if event.is_action_pressed("dig") and is_on_floor():
 		dug.emit()
 		
 	if event.is_action_pressed("interact"):

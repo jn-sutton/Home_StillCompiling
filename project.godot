@@ -21,10 +21,10 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 [autoload]
 
 DialogueManager="*uid://c3rodes2l3gxb"
+GameManager="*uid://c68mt72canumf"
 
 [display]
 
-window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 
@@ -80,6 +80,7 @@ locale/translations_pot_files=PackedStringArray("res://assets/dialogue/squirrel.
 2d_physics/layer_9="Ground"
 2d_physics/layer_10="one_way_ground"
 2d_physics/layer_11="secret_ground"
+2d_physics/layer_17="transitions"
 
 [rendering]
 

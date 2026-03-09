@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://da45e8jbhp66y"]
+
+[ext_resource type="Script" uid="uid://cyk1ubislubng" path="res://assets/scripts/area_exit.gd" id="1_6vaw5"]
+[ext_resource type="Texture2D" uid="uid://beajmpewx2cep" path="res://assets/sprites/interactables/dog_bed.png" id="1_xbkub"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qw5kk"]
+size = Vector2(21, 8)
+
+[node name="AreaExit" type="Area2D" unique_id=1150794667]
+scale = Vector2(1.7, 1.7)
+collision_layer = 65536
+script = ExtResource("1_6vaw5")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=332556948]
+position = Vector2(1, -5)
+texture = ExtResource("1_xbkub")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1703360947]
+position = Vector2(0.5, 5)
+shape = SubResource("RectangleShape2D_qw5kk")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

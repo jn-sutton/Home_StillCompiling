@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dq330p4d5ucof"
-path="res://.godot/imported/gate.png-a5b70f23458fede4c715f5a3eefd0f82.ctex"
+path="res://.godot/imported/gate.png-c603ec47e230f45a75fc4258afd52dc9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/backgrounds/menu_cut_scenes/gate.png"
-dest_files=["res://.godot/imported/gate.png-a5b70f23458fede4c715f5a3eefd0f82.ctex"]
+source_file="res://assets/sprites/backgrounds/level0/gate.png"
+dest_files=["res://.godot/imported/gate.png-c603ec47e230f45a75fc4258afd52dc9.ctex"]
 
 [params]
 

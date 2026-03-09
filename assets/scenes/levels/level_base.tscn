@@ -1,14 +1,37 @@
-[gd_scene format=3 uid="uid://qm6x0agckifn"]
+[gd_scene format=4 uid="uid://qm6x0agckifn"]
 
 [ext_resource type="Script" uid="uid://7i1tpmfqlrag" path="res://assets/scripts/levels/level_base.gd" id="1_futo3"]
 [ext_resource type="PackedScene" uid="uid://dbs53yaet2f1a" path="res://assets/scenes/player/German_Shephard_Breed.tscn" id="2_8gk2r"]
+[ext_resource type="Texture2D" uid="uid://pajp10jk04g1" path="res://assets/sprites/backgrounds/level0/floor_tile.png" id="3_8gk2r"]
+[ext_resource type="PackedScene" uid="uid://da45e8jbhp66y" path="res://assets/scenes/objects/area_exit.tscn" id="4_56mdv"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_56mdv"]
+texture = ExtResource("3_8gk2r")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_0l0tn"]
+physics_layer_0/collision_layer = 256
+physics_layer_0/collision_mask = 0
+sources/0 = SubResource("TileSetAtlasSource_56mdv")
 
 [node name="level_base" type="Node2D" unique_id=99358585]
 script = ExtResource("1_futo3")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=165516391]
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1726034760]
+light_mask = 0
+visibility_layer = 128
+tile_map_data = PackedByteArray("AAAAAP7/AAABAAAAAAABAP7/AAABAAAAAAACAP7/AAABAAAAAAAAAP//AAAAAAEAAAABAP//AAAAAAEAAAACAP//AAAAAAEAAAD+/wAAAAAAAAEAAAD+/wEAAAAAAAEAAAD//wAAAAAAAAEAAAD//wEAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAEAAAAAAAEAAAABAAAAAAAAAAEAAAABAAEAAAAAAAEAAAACAAAAAAAAAAEAAAACAAEAAAAAAAEAAAADAAAAAAAAAAEAAAADAAEAAAAAAAEAAAAEAAAAAAAAAAEAAAAEAAEAAAAAAAEAAAD+////AAAAAAEAAAD/////AAAAAAEAAAADAP//AAAAAAEAAAAEAP//AAAAAAEAAAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAADAP7/AAAAAAAAAAAEAP7/AAAAAAAAAAA=")
+tile_set = SubResource("TileSet_0l0tn")
 
-[node name="German_Shephard" parent="CharacterBody2D" unique_id=340627722 instance=ExtResource("2_8gk2r")]
-position = Vector2(0, 5)
+[node name="AreaExit" parent="." unique_id=1150794667 instance=ExtResource("4_56mdv")]
+position = Vector2(55.999996, -46)
 
-[node name="level_exit" type="Area2D" parent="." unique_id=1013683849]
+[node name="German_Shephard" parent="." unique_id=340627722 instance=ExtResource("2_8gk2r")]
+position = Vector2(20, -42)

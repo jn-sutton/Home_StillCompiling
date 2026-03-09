@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://biom4lb6p4j60"
-path="res://.godot/imported/squirrel.png-b32b449d4e5914ca66a0d982b97ef698.ctex"
+uid="uid://p4wqgm0sghd7"
+path="res://.godot/imported/camp_sign.png-88e194bf565689924ce11dd85211b4e5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/backgrounds/menu_cut_scenes/squirrel.png"
-dest_files=["res://.godot/imported/squirrel.png-b32b449d4e5914ca66a0d982b97ef698.ctex"]
+source_file="res://assets/sprites/backgrounds/level0/camp_sign.png"
+dest_files=["res://.godot/imported/camp_sign.png-88e194bf565689924ce11dd85211b4e5.ctex"]
 
 [params]
 
