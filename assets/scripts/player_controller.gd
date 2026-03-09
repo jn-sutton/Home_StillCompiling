@@ -37,3 +37,10 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, speed_multiplier)
 	
 	move_and_slide()
+	
+func take_damage(amount):
+	die()
+
+func die():
+	print("Dog died")
+	get_tree().reload_current_scene()
