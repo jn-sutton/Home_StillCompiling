@@ -21,7 +21,7 @@ func _ready():
 	on_exit_options_menu()
 
 #needs a const since it won't take the location in the change scene
-const level_0 = preload("res://assets/scenes/levels/level_0.tscn")
+d daconst level_0 = preload("res://assets/scenes/levels/level_0.tscn")
 
 #right now goes straight to tutorial level, but will change to intro scene
 #when it is created
