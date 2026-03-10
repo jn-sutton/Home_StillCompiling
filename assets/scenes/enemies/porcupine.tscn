@@ -121,9 +121,10 @@ size = Vector2(20, 15)
 size = Vector2(10, 6)
 
 [node name="Porcupine" type="CharacterBody2D" unique_id=902211001]
+collision_layer = 2
 collision_mask = 256
 script = ExtResource("1_kpt3k")
-speed = 5000.0
+speed = 50.0
 
 [node name="EnemyAnimator" type="Node2D" parent="." unique_id=639491524]
 
@@ -147,9 +148,11 @@ position = Vector2(-1, -4)
 shape = SubResource("RectangleShape2D_4bun7")
 
 [node name="WallDetectorRight" type="RayCast2D" parent="." unique_id=215676589]
-target_position = Vector2(20, 0)
+target_position = Vector2(13, 0)
+collision_mask = 256
 
 [node name="WallDetectorLeft" type="RayCast2D" parent="." unique_id=215187136]
-target_position = Vector2(-20, 0)
+target_position = Vector2(-14, 0)
+collision_mask = 256
 
 [connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]

@@ -14,21 +14,18 @@ func _ready():
 
 
 func _physics_process(delta):
-
 	if not is_on_floor():
-		velocity += get_gravity() * delta
-		
+		velocity.y += get_gravity().y * delta
+	
 	velocity.x = direction * speed
 	
-	move_and_slide()
-	
+	# Check walls BEFORE moving
 	if wall_detector_right.is_colliding() and direction == 1:
 		flip_direction()
 	elif wall_detector_left.is_colliding() and direction == -1:
 		flip_direction()
-		
-	if not is_on_floor():
-		flip_direction()
+	
+	move_and_slide()
 	
 	
 func flip_direction():
