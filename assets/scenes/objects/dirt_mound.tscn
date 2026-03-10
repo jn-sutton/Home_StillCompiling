@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://lnw1t082gobb"]
+
+[ext_resource type="Texture2D" uid="uid://bvw7isfwrtliq" path="res://assets/sprites/interactables/dirt_mound.png" id="1_v27x3"]
+
+[node name="dirt_mound" type="Area2D" unique_id=326384584]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1024637071]
+texture = ExtResource("1_v27x3")

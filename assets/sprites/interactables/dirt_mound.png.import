@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b65g17r8irhnh"
-path="res://.godot/imported/2.png-ad32b5ce532d7688b780592df4993aff.ctex"
+uid="uid://bvw7isfwrtliq"
+path="res://.godot/imported/dirt_mound.png-e5aed5190f44d8d0fa15afc13371db19.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/backgrounds/2.png"
-dest_files=["res://.godot/imported/2.png-ad32b5ce532d7688b780592df4993aff.ctex"]
+source_file="res://assets/sprites/interactables/dirt_mound.png"
+dest_files=["res://.godot/imported/dirt_mound.png-e5aed5190f44d8d0fa15afc13371db19.ctex"]
 
 [params]
 
