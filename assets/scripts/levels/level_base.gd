@@ -1,3 +1,5 @@
+# base for all levels that they inherit from
+
 extends Node2D
 class_name LevelBase
 
@@ -6,30 +8,20 @@ class_name LevelBase
 var sniff_range = 40
 
 func _ready():
-	# Connect level exit signal
-	if level_exit:
-		level_exit.body_entered.connect(_on_level_exit)
 	
-		# Connect player signals (with safety check)
+		#connects player signals
 	if player:
 		player.sniffed.connect(_on_player_sniffed)
 		player.dug.connect(_on_player_dug)
 		player.interacted.connect(_on_player_interacted)
 	
-	# Any setup all levels need
+	#setup for any level
 	setup_level()
 
 func setup_level():
-	# Override in child levels if needed
+	#override in child levels
 	pass
 
-func _on_level_exit(body):
-	if body == player:
-		transition_to_next_level()
-
-func transition_to_next_level():
-	# Override in each level to specify next scene
-	pass
 
 # Helper function for dialogues
 func show_dialogue(dialogue_file: DialogueResource, dialogue_start: String = "start"):

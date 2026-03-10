@@ -19,7 +19,7 @@ func _physics_process(delta):
 	
 	velocity.x = direction * speed
 	
-	# Check walls BEFORE moving
+	#uses ray cast to check walls then flips if hit
 	if wall_detector_right.is_colliding() and direction == 1:
 		flip_direction()
 	elif wall_detector_left.is_colliding() and direction == -1:

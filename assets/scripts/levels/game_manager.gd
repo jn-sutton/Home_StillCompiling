@@ -1,3 +1,5 @@
+# game manager to keep track of transitions to each new level
+
 extends Node
 
 var current_level = 0

@@ -1,3 +1,7 @@
+# tutorial level / level_0
+# level shows how to utilize movenemnts and sets up story of leaving campground
+# in search of home
+
 extends LevelBase
 
 @onready var dirt_mound = $Environment/DirtMound
