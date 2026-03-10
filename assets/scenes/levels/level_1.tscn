@@ -1,9 +1,10 @@
 [gd_scene format=4 uid="uid://b6c27frxvblwd"]
 
 [ext_resource type="PackedScene" uid="uid://qm6x0agckifn" path="res://assets/scenes/levels/level_base.tscn" id="1_7ugeu"]
+[ext_resource type="PackedScene" uid="uid://dkrioq5gvwans" path="res://assets/scenes/enemies/porcupine.tscn" id="3_m0dby"]
 [ext_resource type="PackedScene" uid="uid://b0vawf4i0ken8" path="res://assets/scenes/main/moving_platform_large.tscn" id="5_28bgd"]
 
-[sub_resource type="Curve2D" id="Curve2D_n07sh"]
+[sub_resource type="Curve2D" id="Curve2D_m0dby"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 226, 0)
@@ -20,4 +21,7 @@ position = Vector2(810.99994, -49.999996)
 
 [node name="MovingPlatformLarge" parent="." index="3" unique_id=2008875506 instance=ExtResource("5_28bgd")]
 position = Vector2(373, -111)
-curve = SubResource("Curve2D_n07sh")
+curve = SubResource("Curve2D_m0dby")
+
+[node name="Porcupine" parent="." index="4" unique_id=902211001 instance=ExtResource("3_m0dby")]
+position = Vector2(350, -41)
