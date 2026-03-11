@@ -1,10 +1,10 @@
 # tutorial level / level_0
-# level shows how to utilize movenemnts and sets up story of leaving campground
+# level shows how to utilize movements and sets up story of leaving campground
 # in search of home
 
 extends LevelBase
 
-@onready var dirt_mound = $Environment/DirtMound
+@onready var dirt_mound = $Environment/dirt_mound
 @onready var key_item = $Environment/KeyItem
 @onready var gate = $Environment/gate
 

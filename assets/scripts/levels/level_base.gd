@@ -4,7 +4,7 @@ extends Node2D
 class_name LevelBase
 
 @onready var level_exit = $level_exit
-@onready var player = $German_Shephard
+@onready var player: PlayerController = $German_Shephard
 var sniff_range = 40
 
 func _ready():
