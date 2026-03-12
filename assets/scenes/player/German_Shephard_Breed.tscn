@@ -819,8 +819,11 @@ _data = {
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tr0ro"]
 size = Vector2(23.5, 20)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ep8yc"]
+size = Vector2(36, 13)
+
 [node name="German_Shephard" type="CharacterBody2D" unique_id=340627722]
-collision_mask = 256
+collision_mask = 262
 script = ExtResource("1_idkry")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1884352731]
@@ -844,3 +847,10 @@ hframes = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=690020783]
 position = Vector2(0.25, 0)
 shape = SubResource("RectangleShape2D_tr0ro")
+
+[node name="ActionableFinder" type="Area2D" parent="." unique_id=7075957]
+collision_layer = 0
+collision_mask = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActionableFinder" unique_id=91022509]
+shape = SubResource("RectangleShape2D_ep8yc")

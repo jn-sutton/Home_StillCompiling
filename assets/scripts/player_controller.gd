@@ -7,6 +7,9 @@ var speed_multiplier = 110.0
 var jump_multiplier = -30.0
 var direction = 0
 
+#for dialogue
+@onready var actionable_finder: Area2D = $ActionableFinder
+
 # Signals for levels to listen to
 signal sniffed
 signal dug
@@ -23,7 +26,12 @@ func _input(event):
 	if event.is_action_pressed("dig") and is_on_floor():
 		dug.emit()
 		
+	#talking to npc's
 	if event.is_action_pressed("interact"):
+		var actionables = actionable_finder.get_overlapping_areas()
+		if actionables.size() > 0:
+			actionables[0].action() 
+			return
 		interacted.emit()
 
 func _physics_process(delta: float) -> void:
