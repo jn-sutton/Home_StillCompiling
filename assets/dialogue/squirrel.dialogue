@@ -1,12 +1,14 @@
-~ start
+~ tutorial_dialogue
 Squirrel: Oh, it's you...what do YOU want??
 - Can you help me open the gate?
-Squirrel: Maybe you can give me something to sweeten the deal.
-- * Hand over the acorn *
-	Nathan: Hey thanks pal! Let me get this button for you
-- No way, my acorn!
-	Nathan: Fine! Good luck getting through without me! NOT!!
-- Start again => start
-- End the conversation => END
-Nathan: For more information see the online documentation.
-=> END
+	Squirrel: Maybe you can give me something to sweeten the deal.
+	- * Hand over the acorn *
+		Squirrel: Hey thanks pal! Let me get this button for you
+	- No way, my acorn!
+		Squirrel: Fine! Good luck getting through without me! NOT!!
+
+~ picked_up_acorn
+I found the acorn!
+
+~ no_acorn
+Squirrel: Come back when you have something for me!

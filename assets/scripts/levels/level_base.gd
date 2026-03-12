@@ -7,6 +7,7 @@ class_name LevelBase
 @onready var player: PlayerController = $German_Shephard
 var sniff_range = 40
 
+
 func _ready():
 	
 		#connects player signals
@@ -29,6 +30,8 @@ func show_dialogue(dialogue_file: DialogueResource, dialogue_start: String = "st
 
 # Helper function for distance checks
 func is_player_near(target: Node2D, range: float = 40) -> bool:
+	if not player or not target:
+		return false
 	return player.global_position.distance_to(target.global_position) <= range
 
 # Override these in child levels for specific interactions
