@@ -26,15 +26,12 @@ func _input(event):
 	
 	if event.is_action_pressed("dig"):
 		dug.emit()
-<<<<<<< HEAD
 		set_collision_mask_value(10, false)
 	else:
 		set_collision_mask_value(10, true)
-=======
 	
 	if event.is_action_pressed("bark"):
 		barked.emit()
->>>>>>> 4d2ab9630fb2040a247de2732abff49a560fa808
 		
 	#talking to npc's
 	if event.is_action_pressed("interact") and can_interact:
