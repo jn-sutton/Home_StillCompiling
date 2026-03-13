@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://p4wqgm0sghd7" path="res://assets/sprites/backgrounds/level0/camp_sign.png" id="13_2qfhk"]
 [ext_resource type="PackedScene" uid="uid://lnw1t082gobb" path="res://assets/scenes/objects/dirt_mound.tscn" id="14_b6xjh"]
 [ext_resource type="PackedScene" uid="uid://d3sj3kwviibii" path="res://assets/scenes/objects/acorn.tscn" id="15_gb3cm"]
+[ext_resource type="PackedScene" uid="uid://xxld6v2rm64s" path="res://assets/scenes/enemies/pigeons.tscn" id="18_21vbr"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_new3k"]
 texture = ExtResource("7_i7r63")
@@ -192,7 +193,7 @@ tile_map_data = PackedByteArray("AADN/wUAAAAAAAEAAADN/wYAAAAAAAEAAADN/wcAAAAAAAE
 position = Vector2(1129, 375)
 
 [node name="German_Shephard" parent="." index="3" unique_id=340627722]
-position = Vector2(574, 381)
+position = Vector2(-312, 378)
 
 [node name="left_sign" type="StaticBody2D" parent="." index="4" unique_id=1836324204]
 position = Vector2(-26, 386)
@@ -223,3 +224,6 @@ shape = SubResource("RectangleShape2D_gb3cm")
 [node name="dirt_mound" parent="." index="6" unique_id=326384584 instance=ExtResource("14_b6xjh")]
 position = Vector2(663, 387)
 hidden_object_scene = ExtResource("15_gb3cm")
+
+[node name="pigeons" parent="." index="7" unique_id=485029358 instance=ExtResource("18_21vbr")]
+position = Vector2(373, 384)

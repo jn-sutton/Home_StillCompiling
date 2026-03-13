@@ -21,26 +21,24 @@ func _input(event):
 	if event.is_action_pressed("jump") and is_on_floor():
 		velocity.y = jump_power * jump_multiplier
 	
-	if event.is_action_pressed("sniff") and is_on_floor():
+	if event.is_action_pressed("sniff"):
 		sniffed.emit()
 	
-	if event.is_action_pressed("dig") and is_on_floor():
+	if event.is_action_pressed("dig"):
 		dug.emit()
+<<<<<<< HEAD
 		set_collision_mask_value(10, false)
 	else:
 		set_collision_mask_value(10, true)
+=======
+	
+	if event.is_action_pressed("bark"):
+		barked.emit()
+>>>>>>> 4d2ab9630fb2040a247de2732abff49a560fa808
 		
 	#talking to npc's
 	if event.is_action_pressed("interact") and can_interact:
-		#can_interact = false
-		#var actionables = actionable_finder.get_overlapping_areas()
-		#if actionables.size() > 0:
-			#actionables[0].action() 
-			#await get_tree().create_timer(0.5).timeout
-			#can_interact = true
-			#return
 		interacted.emit()
-		#can_interact = true
 
 func _physics_process(delta: float) -> void:
 	if not is_on_floor():

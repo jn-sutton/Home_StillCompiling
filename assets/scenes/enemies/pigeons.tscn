@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://xxld6v2rm64s"]
 
 [ext_resource type="Texture2D" uid="uid://bs0rcp7lbx74w" path="res://assets/sprites/interactables/pecking_pigeons.png" id="1_fhbu4"]
+[ext_resource type="Script" uid="uid://cgqa8klws566q" path="res://assets/scripts/pigeons.gd" id="1_xpq4n"]
 [ext_resource type="Texture2D" uid="uid://cp6xv85e6s6dr" path="res://assets/sprites/interactables/pigeons_flying_off.png" id="2_vtf8w"]
 
 [sub_resource type="Animation" id="Animation_vtf8w"]
@@ -53,6 +54,18 @@ tracks/3/keys = {
 "update": 1,
 "values": [0]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(7, -20)]
+}
 
 [sub_resource type="Animation" id="Animation_xpq4n"]
 resource_name = "flying"
@@ -104,6 +117,18 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(7, -20)]
 }
 
 [sub_resource type="Animation" id="Animation_45ech"]
@@ -159,6 +184,18 @@ tracks/3/keys = {
 "update": 1,
 "values": [0, 1, 2, 3, 4, 5]
 }
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Sprite2D:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_sfbwb"]
 _data = {
@@ -167,7 +204,12 @@ _data = {
 &"pecking": SubResource("Animation_45ech")
 }
 
-[node name="pigeons" type="CharacterBody2D" unique_id=297096433]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vtf8w"]
+size = Vector2(84, 19)
+
+[node name="pigeons" type="Area2D" unique_id=485029358 node_paths=PackedStringArray("anim")]
+script = ExtResource("1_xpq4n")
+anim = NodePath("BirdAnimator/AnimationPlayer")
 
 [node name="BirdAnimator" type="Node2D" parent="." unique_id=1576798584]
 
@@ -176,5 +218,11 @@ libraries/ = SubResource("AnimationLibrary_sfbwb")
 autoplay = &"pecking"
 
 [node name="Sprite2D" type="Sprite2D" parent="BirdAnimator" unique_id=858416523]
+position = Vector2(7, -20)
+scale = Vector2(0.5, 0.5)
 texture = ExtResource("1_fhbu4")
 hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2136384960]
+position = Vector2(1, -0.5)
+shape = SubResource("RectangleShape2D_vtf8w")
