@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://dv2ykhx2vgfdv"]
+
+[ext_resource type="FontFile" uid="uid://c6aws4mhwc5y" path="res://assets/fonts/Comfortaa-SemiBold.ttf" id="1_f2k4h"]
+[ext_resource type="Script" uid="uid://di7gaqas2xsfy" path="res://assets/scripts/main_menu/subtitles_toggle_button.gd" id="1_yuvh4"]
+
+[node name="Subtitles_Toggle_Button" type="Control" unique_id=1905628582]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yuvh4")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1505122452]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 64
+
+[node name="Name_Label" type="Label" parent="HBoxContainer" unique_id=1349571157]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_f2k4h")
+theme_override_font_sizes/font_size = 32
+text = "Subtitles"
+
+[node name="VSeparator" type="VSeparator" parent="HBoxContainer" unique_id=155711734]
+layout_mode = 2
+theme_override_constants/separation = 124
+
+[node name="CheckButton" type="CheckButton" parent="HBoxContainer" unique_id=1362683526]
+layout_mode = 2
+
+[node name="VSeparator2" type="VSeparator" parent="HBoxContainer" unique_id=640316082]
+layout_mode = 2
+theme_override_constants/separation = 124
+
+[node name="State_Label" type="Label" parent="HBoxContainer" unique_id=1280096794]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_f2k4h")
+theme_override_font_sizes/font_size = 32
+text = "Off"

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://jisqf8g7tqiv"]
 
 [ext_resource type="PackedScene" uid="uid://cnbt3dfvam6xp" path="res://assets/scenes/main/Options_Menu/audio_slider_settings.tscn" id="1_jfaf6"]
-[ext_resource type="FontFile" uid="uid://c64gxrugos53w" path="res://assets/fonts/Comfortaa-Medium.ttf" id="1_vdfew"]
 [ext_resource type="PackedScene" uid="uid://d2hadepx4ngtg" path="res://assets/scenes/main/Options_Menu/hotkey_rebind_button.tscn" id="2_fw5l4"]
 [ext_resource type="PackedScene" uid="uid://cwon44vpx00d6" path="res://assets/scenes/main/Options_Menu/window_mode_button.tscn" id="2_pl86c"]
 [ext_resource type="PackedScene" uid="uid://ch5ohxl8y1gd0" path="res://assets/scenes/main/Options_Menu/resolution_mode_button.tscn" id="3_7coas"]
+[ext_resource type="PackedScene" uid="uid://dv2ykhx2vgfdv" path="res://assets/scenes/main/Options_Menu/subtitles_toggle_button.tscn" id="5_jfaf6"]
 
 [node name="Settings_Tab_Container" type="Control" unique_id=94741996]
 layout_mode = 3
@@ -169,42 +169,11 @@ theme_override_constants/margin_top = 24
 theme_override_constants/margin_right = 24
 theme_override_constants/margin_bottom = 24
 
-[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Accessibility/MarginContainer" unique_id=1396523129]
+[node name="ScrollContainer" type="ScrollContainer" parent="TabContainer/Accessibility/MarginContainer" unique_id=1804729739]
 layout_mode = 2
-theme_override_constants/separation = 64
-alignment = 1
 
-[node name="Label" type="Label" parent="TabContainer/Accessibility/MarginContainer/VBoxContainer" unique_id=1048328762]
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/Accessibility/MarginContainer/ScrollContainer" unique_id=1195812497]
 layout_mode = 2
-theme_override_constants/outline_size = 3
-theme_override_fonts/font = ExtResource("1_vdfew")
-theme_override_font_sizes/font_size = 24
-text = "A1"
 
-[node name="Label2" type="Label" parent="TabContainer/Accessibility/MarginContainer/VBoxContainer" unique_id=689396430]
+[node name="Subtitles_Toggle_Button" parent="TabContainer/Accessibility/MarginContainer/ScrollContainer/VBoxContainer" unique_id=1905628582 instance=ExtResource("5_jfaf6")]
 layout_mode = 2
-theme_override_constants/outline_size = 3
-theme_override_fonts/font = ExtResource("1_vdfew")
-theme_override_font_sizes/font_size = 24
-text = "A2"
-
-[node name="Label3" type="Label" parent="TabContainer/Accessibility/MarginContainer/VBoxContainer" unique_id=375725192]
-layout_mode = 2
-theme_override_constants/outline_size = 3
-theme_override_fonts/font = ExtResource("1_vdfew")
-theme_override_font_sizes/font_size = 24
-text = "A3"
-
-[node name="Label4" type="Label" parent="TabContainer/Accessibility/MarginContainer/VBoxContainer" unique_id=1631653297]
-layout_mode = 2
-theme_override_constants/outline_size = 3
-theme_override_fonts/font = ExtResource("1_vdfew")
-theme_override_font_sizes/font_size = 24
-text = "A4"
-
-[node name="Label5" type="Label" parent="TabContainer/Accessibility/MarginContainer/VBoxContainer" unique_id=197090284]
-layout_mode = 2
-theme_override_constants/outline_size = 3
-theme_override_fonts/font = ExtResource("1_vdfew")
-theme_override_font_sizes/font_size = 24
-text = "A5"
