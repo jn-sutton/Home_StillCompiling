@@ -26,6 +26,9 @@ func _input(event):
 	
 	if event.is_action_pressed("dig") and is_on_floor():
 		dug.emit()
+		set_collision_mask_value(10, false)
+	else:
+		set_collision_mask_value(10, true)
 		
 	#talking to npc's
 	if event.is_action_pressed("interact") and can_interact:

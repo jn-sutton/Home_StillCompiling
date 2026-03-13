@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bvditqe1htjlq"]
+
+[ext_resource type="Texture2D" uid="uid://dsnbydqkj63wb" path="res://assets/sprites/backgrounds/Vegetation.png" id="1_plhc2"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_j7u8w"]
+radius = 6.3245554
+
+[node name="bush" type="Area2D" unique_id=1908552492]
+collision_layer = 8
+collision_mask = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1867852747]
+position = Vector2(-1.9073486e-06, 0)
+scale = Vector2(1.6333344, 0.60714287)
+texture = ExtResource("1_plhc2")
+region_enabled = true
+region_rect = Rect2(1.6086159, 4.6877775, 30.632427, 27.678356)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1734579870]
+shape = SubResource("CircleShape2D_j7u8w")

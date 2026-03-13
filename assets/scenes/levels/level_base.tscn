@@ -12,13 +12,17 @@ texture = ExtResource("3_8gk2r")
 1:0/0 = 0
 1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:1/0 = 0
-0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0/physics_layer_1/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/0 = 0
-1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0/physics_layer_2/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSet" id="TileSet_0l0tn"]
 physics_layer_0/collision_layer = 256
-physics_layer_0/collision_mask = 0
+physics_layer_0/collision_mask = 23
+physics_layer_1/collision_layer = 512
+physics_layer_1/collision_mask = 23
+physics_layer_2/collision_layer = 1024
+physics_layer_2/collision_mask = 23
 sources/0 = SubResource("TileSetAtlasSource_56mdv")
 
 [node name="level_base" type="Node2D" unique_id=99358585]
@@ -35,3 +39,4 @@ position = Vector2(55.999996, -46)
 
 [node name="German_Shephard" parent="." unique_id=340627722 instance=ExtResource("2_8gk2r")]
 position = Vector2(20, -42)
+collision_mask = 1798
