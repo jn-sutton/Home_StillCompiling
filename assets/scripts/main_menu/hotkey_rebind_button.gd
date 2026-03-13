@@ -26,8 +26,8 @@ func set_action_name() -> void:
 			label.text = "Jump"
 		"dig":
 			label.text = "Dig"
-		"pick_up":
-			label.text = "Pick Up"
+		"interact":
+			label.text = "Interact"
 		"sniff":
 			label.text = "Sniff"
 		"bark":

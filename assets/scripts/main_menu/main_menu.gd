@@ -21,12 +21,12 @@ func _ready():
 	on_exit_options_menu()
 
 #needs a const since it won't take the location in the change scene
-const level_0 = preload("res://assets/scenes/levels/level_0.tscn")
+const opening_scene = preload("res://assets/scenes/main/opening_scene.tscn")
 
 #right now goes straight to tutorial level, but will change to intro scene
 #when it is created
 func on_start_pressed() -> void:
-	get_tree().change_scene_to_packed(level_0)
+	get_tree().change_scene_to_packed(opening_scene)
 
 func on_options_pressed() -> void:
 	margin_container.visible = false
