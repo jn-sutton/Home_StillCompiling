@@ -8,6 +8,8 @@ extends LevelBase
 @onready var gate = $gate
 @onready var squirrel = $Environment/squirrel
 @export var tutorial_dialogue: DialogueResource
+@onready var pigeons = $pigeons
+
 
 
 var acorn = null
@@ -19,8 +21,13 @@ func _ready():
 	#connects dirt mounds signal
 	if dirt_mound:
 		dirt_mound.object_revealed.connect(_on_object_revealed)
-		
+	# Connect player bark to check distance
+	player.barked.connect(_on_player_barked)
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
+	
+func _on_player_barked():
+	if is_player_near(pigeons, 200):  # Bark range
+		pigeons.bark_at()
 	
 func _on_object_revealed(object):
 	acorn = object
