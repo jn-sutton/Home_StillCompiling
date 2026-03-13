@@ -1,7 +1,7 @@
 extends Area2D
 
 @export var dialogue_resource: DialogueResource
-@export var dialogue_start: String = "tutorial"
+@export var dialogue_start: String = "tutorial_dialogue"
 
 func action() -> void:
-	DialogueManager.show_dialogue_balloon(dialogue_resource, dialogue_start)
+	DialogueManager.show_example_dialogue_balloon(dialogue_resource, dialogue_start)

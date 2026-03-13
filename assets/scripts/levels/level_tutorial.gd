@@ -19,15 +19,15 @@ func _ready():
 	#connects dirt mounds signal
 	if dirt_mound:
 		dirt_mound.object_revealed.connect(_on_object_revealed)
-	#listen for dialogue
-	DialogueManager.passed_title.connect(_on_dialogue_signal)
+		
+	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	
 func _on_object_revealed(object):
 	acorn = object
 	acorn.picked_up.connect(_on_acorn_picked_up)
 	
 func _on_acorn_picked_up():
-	has_acorn = true
+	State.has_acorn = true
 	
 	#later add hud to display this in inventory
 
@@ -40,13 +40,17 @@ func _on_player_dug():
 		dirt_mound.dig_up()
 		
 
-func _on_dialogue_signal(arg):
-	if arg == "open gate":
+var gate_opened = false
+
+func _on_dialogue_ended(resource):
+	# Only open if acorn was just given
+	if State.gave_acorn and not gate_opened:
+		gate_opened = true
 		open_gate()
 
 func open_gate():
-	gate.queue_free()
-		
+	if gate:
+		gate.queue_free()
 	#gives acorn to squirrel to make gate disappear
 	
 

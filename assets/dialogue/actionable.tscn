@@ -1,7 +1,10 @@
 [gd_scene format=3 uid="uid://b2jv4ct7e6i0m"]
 
 [ext_resource type="Script" uid="uid://7wvju5gcakxg" path="res://assets/dialogue/actionable.gd" id="1_rjsxk"]
+[ext_resource type="Resource" uid="uid://blbcwfixnocqe" path="res://assets/dialogue/squirrel.dialogue" id="2_7jqs3"]
 
 [node name="Actionable" type="Area2D" unique_id=1736143903]
 collision_layer = 16
 script = ExtResource("1_rjsxk")
+dialogue_resource = ExtResource("2_7jqs3")
+dialogue_start = ""

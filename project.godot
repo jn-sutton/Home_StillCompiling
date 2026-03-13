@@ -22,6 +22,7 @@ config/features=PackedStringArray("4.6", "Forward Plus")
 
 DialogueManager="*uid://c3rodes2l3gxb"
 GameManager="*uid://c68mt72canumf"
+State="*uid://bwfeo4b2rc12y"
 
 [display]
 

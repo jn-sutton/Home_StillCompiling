@@ -1,13 +1,17 @@
 ~ tutorial_dialogue
-
-	Squirrel: Oh, it's you...what do YOU want??
+if State.gave_acorn == true:
+	Squirrel: Go! Find your family!
+elif State.has_acorn == true:
+	Squirrel: Oh it's you... what do YOU want??
 	- Can you help me open the gate?
 		Squirrel: Maybe you can give me something to sweeten the deal.
-		- * Hand over the acorn *
+		- Hand over the acorn
+			do State.has_acorn = false
+			do State.gave_acorn = true
 			Squirrel: Hey thanks pal! Let me get this button for you
-		- No way, my acorn!
-			Squirrel: Fine! Good luck getting through without me! NOT!!
+			Squirrel: Now go! Find your family!
+		- No way my acorn!
+			Squirrel: Fine! Good luck getting through without me! NOT!
 else:
-	Squirrel: Stop chasing me! 
-	
+	Squirrel: Stop chasing me! Come back when you have something!
 => END
