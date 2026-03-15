@@ -31,5 +31,5 @@ func _on_kill_zone_body_entered(body: Node2D) -> void:
 	if body.name == "German_Shephard":
 		player.die()
 		
-func transition_to_next_level():
-	get_tree().change_scene_to_file("res://scenes/levels/level_02.tscn")
+#func transition_to_next_level():
+	#dget_tree().change_scene_to_file("res://scenes/levels/level_2.tscn")

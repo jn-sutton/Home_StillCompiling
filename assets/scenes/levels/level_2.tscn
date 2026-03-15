@@ -1,3 +1,46 @@
 [gd_scene format=3 uid="uid://x0ocos2jn352"]
 
-[node name="Level2" type="Node2D" unique_id=1637366383]
+[ext_resource type="PackedScene" uid="uid://qm6x0agckifn" path="res://assets/scenes/levels/level_base.tscn" id="1_icxrv"]
+[ext_resource type="Script" uid="uid://dur17n60s2csm" path="res://assets/scripts/levels/level_2.gd" id="2_ttb08"]
+[ext_resource type="Texture2D" uid="uid://deegdubkkatla" path="res://assets/sprites/backgrounds/level2/2.png" id="3_xfbpt"]
+[ext_resource type="Texture2D" uid="uid://brwvddvhohh1t" path="res://assets/sprites/backgrounds/level2/1.png" id="4_5gbqh"]
+[ext_resource type="Texture2D" uid="uid://dwtepidq4b7qs" path="res://assets/sprites/backgrounds/level2/3.png" id="5_uccv7"]
+
+[node name="level_2" unique_id=99358585 instance=ExtResource("1_icxrv")]
+script = ExtResource("2_ttb08")
+
+[node name="background" type="Node2D" parent="." index="0" unique_id=381891199]
+position = Vector2(36, 191)
+
+[node name="sky" type="Parallax2D" parent="background" index="0" unique_id=2038530511]
+scroll_scale = Vector2(0.1, 0.1)
+repeat_size = Vector2(576, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="background/sky" index="0" unique_id=1194141364]
+texture = ExtResource("3_xfbpt")
+
+[node name="lights" type="Parallax2D" parent="background" index="1" unique_id=745791838]
+scroll_scale = Vector2(0.3, 0.3)
+repeat_size = Vector2(576, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="background/lights" index="0" unique_id=345836103]
+texture = ExtResource("4_5gbqh")
+
+[node name="mountains" type="Parallax2D" parent="background" index="2" unique_id=1685524770]
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(576, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="background/mountains" index="0" unique_id=379648208]
+texture = ExtResource("5_uccv7")
+
+[node name="TileMapLayer" parent="." index="1" unique_id=1726034760]
+position = Vector2(-439, 334)
+
+[node name="AreaExit" parent="." index="2" unique_id=1150794667]
+position = Vector2(-383.00006, 288.00003)
+
+[node name="German_Shephard" parent="." index="3" unique_id=340627722]
+position = Vector2(-419, 292)
