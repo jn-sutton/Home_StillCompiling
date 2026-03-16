@@ -62,4 +62,4 @@ func open_gate():
 	
 
 func transition_to_next_level():
-	get_tree().change_scene_to_file("res://scenes/levels/level_01.tscn")
+	get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")

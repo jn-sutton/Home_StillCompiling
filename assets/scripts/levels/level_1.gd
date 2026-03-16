@@ -3,12 +3,17 @@
 
 extends LevelBase
 
+@onready var dirt_mound = $dirt_mound
 @onready var timer: Timer = $Timer
 @onready var bush = $bush
 var is_visible: bool = true
+var bone = null
+var has_bone = false
 
 func _ready():
 	super._ready()
+	if dirt_mound:
+		dirt_mound.object_revealed.connect(_on_object_revealed)
 
 func _on_player_dug():
 	if is_player_near(bush):
@@ -30,6 +35,24 @@ func _on_timer_timeout():
 func _on_kill_zone_body_entered(body: Node2D) -> void:
 	if body.name == "German_Shephard":
 		player.die()
+
+#dirt mound functions
+func _on_player_sniffed():
+	if is_player_near(dirt_mound, 150):
+		dirt_mound.reveal_mound()
 		
-#func transition_to_next_level():
-	#dget_tree().change_scene_to_file("res://scenes/levels/level_2.tscn")
+func _on_player_dug_mound():
+	if is_player_near(dirt_mound):
+		dirt_mound.dig_up()
+		
+func _on_object_revealed(object):
+	bone = object
+	bone.picked_up.connect(_on_bone_picked_up)
+
+func _on_bone_picked_up():
+	State.has_acorn = true
+	
+	#later add hud to display this in inventory
+		
+func transition_to_next_level():
+	get_tree().change_scene_to_file("res://scenes/levels/level_2.tscn")
