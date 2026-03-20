@@ -34,7 +34,7 @@ physics_layer_0/collision_layer = 256
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_812fv")
 
-[sub_resource type="Curve2D" id="Curve2D_m40wg"]
+[sub_resource type="Curve2D" id="Curve2D_nhclf"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 226, 0)
@@ -138,7 +138,7 @@ position = Vector2(32, -40)
 
 [node name="MovingPlatformLarge" parent="." index="6" unique_id=2008875506 instance=ExtResource("5_28bgd")]
 position = Vector2(367, -108)
-curve = SubResource("Curve2D_m40wg")
+curve = SubResource("Curve2D_nhclf")
 
 [node name="Porcupine" parent="." index="7" unique_id=902211001 instance=ExtResource("3_m0dby")]
 position = Vector2(410, -39)

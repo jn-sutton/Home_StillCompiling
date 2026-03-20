@@ -27,7 +27,18 @@ func _physics_process(delta):
 	
 	move_and_slide()
 	
+	for i in range(get_slide_collision_count()):
+		var collision = get_slide_collision(i)
+		var body = collision.get_collider()
+
+		if body.has_method("die"):
+			body.die()
 	
 func flip_direction():
 	direction *= -1
 	sprite.flip_h = (direction == -1)
+
+
+func _on_player_detector_body_entered(body: Node2D) -> void:
+	if body is PlayerController:
+		body.take_damage(1)
