@@ -2,6 +2,58 @@
 
 [ext_resource type="PackedScene" uid="uid://qm6x0agckifn" path="res://assets/scenes/levels/level_base.tscn" id="1_ydnoq"]
 [ext_resource type="Script" uid="uid://djg665d5ss652" path="res://assets/scripts/levels/level_3.gd" id="2_x8kg0"]
+[ext_resource type="Texture2D" uid="uid://dwrkbqo8lyidw" path="res://assets/sprites/backgrounds/level5/1.png" id="3_ic2y8"]
+[ext_resource type="Texture2D" uid="uid://dxtkgnaymbrww" path="res://assets/sprites/backgrounds/level5/2.png" id="4_3xxnt"]
+[ext_resource type="Texture2D" uid="uid://cfery4xuk5h8m" path="res://assets/sprites/backgrounds/level5/3.png" id="5_pv0wj"]
+[ext_resource type="Texture2D" uid="uid://b1b4s2ml4h5d0" path="res://assets/sprites/backgrounds/level5/4.png" id="6_cp335"]
 
 [node name="level_3" unique_id=99358585 instance=ExtResource("1_ydnoq")]
 script = ExtResource("2_x8kg0")
+
+[node name="background" type="Node2D" parent="." index="0" unique_id=1287245847]
+position = Vector2(689, 224)
+
+[node name="sky" type="Parallax2D" parent="background" index="0" unique_id=285525722]
+scroll_scale = Vector2(0.2, 0.2)
+repeat_size = Vector2(576, 0)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="background/sky" index="0" unique_id=1523086414]
+texture = ExtResource("3_ic2y8")
+
+[node name="clouds" type="Parallax2D" parent="background" index="1" unique_id=473706180]
+scroll_scale = Vector2(0.3, 0.3)
+repeat_size = Vector2(576, 0)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="background/clouds" index="0" unique_id=654316603]
+texture = ExtResource("4_3xxnt")
+
+[node name="far_grass" type="Parallax2D" parent="background" index="2" unique_id=529646997]
+scroll_scale = Vector2(0.5, 0.5)
+repeat_size = Vector2(576, 0)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="background/far_grass" index="0" unique_id=1887611359]
+texture = ExtResource("5_pv0wj")
+
+[node name="close_grass" type="Parallax2D" parent="background" index="3" unique_id=346910985]
+scroll_scale = Vector2(0.7, 0.7)
+repeat_size = Vector2(576, 0)
+repeat_times = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="background/close_grass" index="0" unique_id=867069714]
+texture = ExtResource("6_cp335")
+
+[node name="houses" type="Parallax2D" parent="background" index="4" unique_id=1425580842]
+
+[node name="Sprite2D" type="Sprite2D" parent="background/houses" index="0" unique_id=731411732]
+
+[node name="TileMapLayer" parent="." index="1" unique_id=1726034760]
+position = Vector2(-608, 392.99997)
+
+[node name="AreaExit" parent="." index="2" unique_id=1150794667]
+position = Vector2(-552.0001, 347)
+
+[node name="German_Shephard" parent="." index="3" unique_id=340627722]
+position = Vector2(-588, 350.99997)
