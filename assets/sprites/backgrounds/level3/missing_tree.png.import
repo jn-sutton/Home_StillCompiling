@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b1b4s2ml4h5d0"
-path="res://.godot/imported/4.png-f02d26f0b693aa6701ed0e6f22193735.ctex"
+uid="uid://dun51by1l4wum"
+path="res://.godot/imported/missing_tree.png-75b9184fd6b66d04d1b3085c243862b7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/backgrounds/level5/4.png"
-dest_files=["res://.godot/imported/4.png-f02d26f0b693aa6701ed0e6f22193735.ctex"]
+source_file="res://assets/sprites/backgrounds/level3/missing_tree.png"
+dest_files=["res://.godot/imported/missing_tree.png-75b9184fd6b66d04d1b3085c243862b7.ctex"]
 
 [params]
 
