@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://bsdkybrai4tbt" path="res://assets/sprites/backgrounds/level3/houses.png" id="7_pv0wj"]
 [ext_resource type="Texture2D" uid="uid://bhy7afyatsxkd" path="res://assets/sprites/backgrounds/level3/home.png" id="8_tf3s5"]
 [ext_resource type="Texture2D" uid="uid://budb7koc72v7" path="res://assets/sprites/backgrounds/level3/level3_floor.png" id="9_cp335"]
+[ext_resource type="Texture2D" uid="uid://bjyogk7nnrkvd" path="res://assets/sprites/backgrounds/level3/trashcan.png" id="11_0kdo3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tf3s5"]
 texture = ExtResource("9_cp335")
@@ -29,6 +30,9 @@ sources/0 = SubResource("TileSetAtlasSource_tf3s5")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cp335"]
 size = Vector2(24, 129)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jv0of"]
+size = Vector2(14.75, 19.625)
 
 [node name="level_3" unique_id=99358585 instance=ExtResource("1_ydnoq")]
 position = Vector2(927, -2)
@@ -118,3 +122,37 @@ collision_mask = 3
 
 [node name="beginning" type="CollisionShape2D" parent="beginning_wall" index="0" unique_id=473196622]
 shape = SubResource("RectangleShape2D_cp335")
+
+[node name="trash_can" type="StaticBody2D" parent="." index="6" unique_id=1498367710]
+position = Vector2(-417, 342)
+scale = Vector2(2, 2)
+collision_layer = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="trash_can" index="0" unique_id=1004462516]
+position = Vector2(3, -0.5)
+texture = ExtResource("11_0kdo3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="trash_can" index="1" unique_id=919420652]
+position = Vector2(10, 10.6875)
+shape = SubResource("RectangleShape2D_jv0of")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="trash_can" index="2" unique_id=1567777443]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_jv0of")
+
+[node name="trash_can2" type="StaticBody2D" parent="." index="7" unique_id=620227533]
+position = Vector2(-197, 344)
+scale = Vector2(2, 2)
+collision_layer = 4
+
+[node name="Sprite2D" type="Sprite2D" parent="trash_can2" index="0" unique_id=602498349]
+position = Vector2(3, -0.5)
+texture = ExtResource("11_0kdo3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="trash_can2" index="1" unique_id=2007160639]
+position = Vector2(10, 10.6875)
+shape = SubResource("RectangleShape2D_jv0of")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="trash_can2" index="2" unique_id=1523712799]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_jv0of")
