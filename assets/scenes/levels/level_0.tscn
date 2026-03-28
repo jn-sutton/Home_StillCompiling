@@ -46,6 +46,9 @@ radius = 54.037025
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gb3cm"]
 size = Vector2(6, 65)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_21vbr"]
+size = Vector2(24, 129)
+
 [node name="level_0" unique_id=99358585 instance=ExtResource("1_u5gtw")]
 script = ExtResource("2_b6xjh")
 tutorial_dialogue = ExtResource("3_4kyv5")
@@ -227,3 +230,11 @@ hidden_object_scene = ExtResource("15_gb3cm")
 
 [node name="pigeons" parent="." index="7" unique_id=485029358 instance=ExtResource("18_21vbr")]
 position = Vector2(373, 384)
+
+[node name="beginning_wall" type="StaticBody2D" parent="." index="8" unique_id=871333218]
+position = Vector2(-376, 326)
+collision_layer = 256
+collision_mask = 3
+
+[node name="beginning" type="CollisionShape2D" parent="beginning_wall" index="0" unique_id=708320152]
+shape = SubResource("RectangleShape2D_21vbr")

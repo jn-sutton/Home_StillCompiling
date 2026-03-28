@@ -26,7 +26,7 @@ func _ready():
 	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	
 func _on_player_barked():
-	if is_player_near(pigeons, 200):  # Bark range
+	if pigeons and is_player_near(pigeons, 200):
 		pigeons.bark_at()
 	
 func _on_object_revealed(object):
