@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://bhy7afyatsxkd" path="res://assets/sprites/backgrounds/level3/home.png" id="8_tf3s5"]
 [ext_resource type="Texture2D" uid="uid://budb7koc72v7" path="res://assets/sprites/backgrounds/level3/level3_floor.png" id="9_cp335"]
 [ext_resource type="Texture2D" uid="uid://bjyogk7nnrkvd" path="res://assets/sprites/backgrounds/level3/trashcan.png" id="11_0kdo3"]
+[ext_resource type="PackedScene" uid="uid://xxld6v2rm64s" path="res://assets/scenes/enemies/pigeons.tscn" id="12_jv0of"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_tf3s5"]
 texture = ExtResource("9_cp335")
@@ -37,6 +38,7 @@ size = Vector2(14.75, 19.625)
 [node name="level_3" unique_id=99358585 instance=ExtResource("1_ydnoq")]
 position = Vector2(927, -2)
 script = ExtResource("2_x8kg0")
+tutorial_dialogue = null
 
 [node name="background" type="Node2D" parent="." index="0" unique_id=1287245847]
 position = Vector2(689, 224)
@@ -156,3 +158,6 @@ shape = SubResource("RectangleShape2D_jv0of")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="trash_can2" index="2" unique_id=1523712799]
 position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_jv0of")
+
+[node name="pigeons" parent="." index="8" unique_id=485029358 instance=ExtResource("12_jv0of")]
+position = Vector2(-482, 359)
