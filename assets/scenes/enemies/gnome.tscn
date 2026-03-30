@@ -1,0 +1,152 @@
+[gd_scene format=3 uid="uid://cx1lex50y5ctt"]
+
+[ext_resource type="Script" uid="uid://g4kysdut3dok" path="res://assets/scripts/gnome.gd" id="1_vs5kt"]
+[ext_resource type="Texture2D" uid="uid://brvi1ob1safd1" path="res://assets/sprites/enemies/gnome sprite sheet.png" id="1_w50rk"]
+
+[sub_resource type="Animation" id="Animation_vs5kt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_w50rk")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_p80tm"]
+resource_name = "walk"
+length = 0.4
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("1_w50rk")]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Sprite2D:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [4]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Sprite2D:vframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [1]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Sprite2D:frame")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ali2p"]
+_data = {
+&"RESET": SubResource("Animation_vs5kt"),
+&"walk": SubResource("Animation_p80tm")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7fn0m"]
+size = Vector2(22, 38)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_reyx5"]
+size = Vector2(22, 15)
+
+[node name="gnome" type="CharacterBody2D" unique_id=916612245]
+collision_layer = 2
+collision_mask = 256
+script = ExtResource("1_vs5kt")
+
+[node name="EnemyAnimator" type="Node2D" parent="." unique_id=1521808302]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="EnemyAnimator" unique_id=845183345]
+libraries/ = SubResource("AnimationLibrary_ali2p")
+
+[node name="Sprite2D" type="Sprite2D" parent="EnemyAnimator" unique_id=253633463]
+texture = ExtResource("1_w50rk")
+hframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=151484426]
+shape = SubResource("RectangleShape2D_7fn0m")
+
+[node name="PlayerDetector" type="Area2D" parent="." unique_id=43647164]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerDetector" unique_id=178672186]
+position = Vector2(0, 1.5)
+shape = SubResource("RectangleShape2D_reyx5")
+
+[node name="WallDetectorRight" type="RayCast2D" parent="." unique_id=1703866444]
+target_position = Vector2(13, 0)
+collision_mask = 256
+
+[node name="WallDetectorLeft" type="RayCast2D" parent="." unique_id=366442910]
+target_position = Vector2(-14, 0)
+collision_mask = 256

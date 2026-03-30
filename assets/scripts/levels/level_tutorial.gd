@@ -10,8 +10,8 @@ extends LevelBase
 @export var tutorial_dialogue: DialogueResource
 @onready var pigeons = $pigeons
 
-
-
+#ensures only one use mound
+var mound_used = false
 var acorn = null
 var has_acorn = false
 
@@ -30,6 +30,7 @@ func _on_player_barked():
 		pigeons.bark_at()
 	
 func _on_object_revealed(object):
+	mound_used = true
 	acorn = object
 	acorn.picked_up.connect(_on_acorn_picked_up)
 	
@@ -39,11 +40,11 @@ func _on_acorn_picked_up():
 	#later add hud to display this in inventory
 
 func _on_player_sniffed():
-	if is_player_near(dirt_mound, 150):
+	if not mound_used and is_player_near(dirt_mound, 150):
 		dirt_mound.reveal_mound()
 
 func _on_player_dug():
-	if is_player_near(dirt_mound):
+	if not mound_used and is_player_near(dirt_mound):
 		dirt_mound.dig_up()
 		
 
