@@ -11,6 +11,11 @@ var can_interact = true
 #for dialogue
 @onready var actionable_finder: Area2D = $ActionableFinder
 
+#for sfx
+@onready var sniff_sfx: AudioStreamPlayer2D = $SFX/sniff_sfx
+
+
+
 # Signals for levels to listen to
 signal sniffed
 signal dug
@@ -23,12 +28,14 @@ func _input(event):
 	
 	if event.is_action_pressed("sniff"):
 		sniffed.emit()
+		sniff_sfx.play()
+	# When the button is let go
+	elif event.is_action_released("sniff"):
+		sniff_sfx.stop()
 	
 	if event.is_action_pressed("dig"):
 		dug.emit()
-		set_collision_mask_value(10, false)
-	else:
-		set_collision_mask_value(10, true)
+		
 	
 	if event.is_action_pressed("bark"):
 		barked.emit()

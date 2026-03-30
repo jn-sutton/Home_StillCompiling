@@ -34,7 +34,7 @@ physics_layer_0/collision_layer = 256
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_nhclf")
 
-[sub_resource type="Curve2D" id="Curve2D_mbfih"]
+[sub_resource type="Curve2D" id="Curve2D_nhclf"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 226, 0)
@@ -136,41 +136,41 @@ position = Vector2(1311, -13)
 [node name="bush" parent="." index="4" unique_id=1908552492 instance=ExtResource("6_u4b5a")]
 position = Vector2(804, -33)
 
-[node name="German_Shephard" parent="." index="5" unique_id=340627722]
+[node name="dirt_mound" parent="." index="5" unique_id=326384584 instance=ExtResource("16_812fv")]
+position = Vector2(500, -36)
+hidden_object_scene = ExtResource("17_nhclf")
+
+[node name="German_Shephard" parent="." index="6" unique_id=340627722]
 position = Vector2(32, -40)
 
-[node name="MovingPlatformLarge" parent="." index="6" unique_id=2008875506 instance=ExtResource("5_28bgd")]
+[node name="MovingPlatformLarge" parent="." index="7" unique_id=2008875506 instance=ExtResource("5_28bgd")]
 position = Vector2(367, -108)
-curve = SubResource("Curve2D_mbfih")
+curve = SubResource("Curve2D_nhclf")
 
-[node name="Porcupine" parent="." index="7" unique_id=902211001 instance=ExtResource("3_m0dby")]
+[node name="Porcupine" parent="." index="8" unique_id=902211001 instance=ExtResource("3_m0dby")]
 position = Vector2(410, -39)
 collision_mask = 1792
 
-[node name="Timer" type="Timer" parent="." index="8" unique_id=1823140651]
+[node name="Timer" type="Timer" parent="." index="9" unique_id=1823140651]
 
-[node name="StaticBody2D" parent="." index="9" unique_id=1128900486 groups=["invis_platforms"] instance=ExtResource("6_28bgd")]
+[node name="StaticBody2D" parent="." index="10" unique_id=1128900486 groups=["invis_platforms"] instance=ExtResource("6_28bgd")]
 position = Vector2(862, 51)
 
-[node name="StaticBody2D2" parent="." index="10" unique_id=1616558887 groups=["invis_platforms"] instance=ExtResource("6_28bgd")]
+[node name="StaticBody2D2" parent="." index="11" unique_id=1616558887 groups=["invis_platforms"] instance=ExtResource("6_28bgd")]
 position = Vector2(942, 51)
 
-[node name="StaticBody2D3" parent="." index="11" unique_id=112255184 groups=["invis_platforms"] instance=ExtResource("6_28bgd")]
+[node name="StaticBody2D3" parent="." index="12" unique_id=112255184 groups=["invis_platforms"] instance=ExtResource("6_28bgd")]
 position = Vector2(1022, 51)
 
-[node name="StaticBody2D4" parent="." index="12" unique_id=54289759 groups=["invis_platforms"] instance=ExtResource("6_28bgd")]
+[node name="StaticBody2D4" parent="." index="13" unique_id=54289759 groups=["invis_platforms"] instance=ExtResource("6_28bgd")]
 position = Vector2(1102, 51)
 
-[node name="KillZone2" type="Area2D" parent="." index="13" unique_id=741620927]
+[node name="KillZone2" type="Area2D" parent="." index="14" unique_id=741620927]
 position = Vector2(-6, 3)
 collision_layer = 8
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone2" index="0" unique_id=905848133]
 shape = SubResource("WorldBoundaryShape2D_28bgd")
-
-[node name="DirtMound" parent="." index="14" unique_id=326384584 instance=ExtResource("16_812fv")]
-position = Vector2(500, -36)
-hidden_object_scene = ExtResource("17_nhclf")
 
 [node name="beginning_wall" type="StaticBody2D" parent="." index="15" unique_id=1354274612]
 position = Vector2(-77, -85)

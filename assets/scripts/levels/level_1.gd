@@ -9,6 +9,7 @@ extends LevelBase
 var is_visible: bool = true
 var bone = null
 var has_bone = false
+var mound_used = false
 
 func _ready():
 	super._ready()
@@ -20,8 +21,9 @@ func _on_player_dug():
 		player.set_collision_mask_value(11, false)
 		bush.visible = false
 		timer.start()
-	else:
-		player.set_collision_mask_value(11, true)
+	else: 
+		if not mound_used and is_player_near(dirt_mound):
+			dirt_mound.dig_up()
 	
 func _on_timer_timeout():
 	is_visible = !is_visible
@@ -38,14 +40,12 @@ func _on_kill_zone_body_entered(body: Node2D) -> void:
 
 #dirt mound functions
 func _on_player_sniffed():
-	if is_player_near(dirt_mound, 150):
+	if not mound_used and is_player_near(dirt_mound, 150):
 		dirt_mound.reveal_mound()
 		
-func _on_player_dug_mound():
-	if is_player_near(dirt_mound):
-		dirt_mound.dig_up()
 		
 func _on_object_revealed(object):
+	mound_used = true
 	bone = object
 	bone.picked_up.connect(_on_bone_picked_up)
 

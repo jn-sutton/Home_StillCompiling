@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://bbb051ai7yo2h" path="res://assets/sprites/players/german_shephard/dog_run_strip8.png" id="9_g7w7r"]
 [ext_resource type="Script" uid="uid://dp3khb1fhmjla" path="res://assets/scripts/player_animator.gd" id="10_onf58"]
 [ext_resource type="Texture2D" uid="uid://dn7i577hx4ad0" path="res://assets/sprites/players/german_shephard/dog_sniff_strip.png" id="12_2eboe"]
+[ext_resource type="AudioStream" uid="uid://sd5i0nroskby" path="res://assets/audio/Cartoon Dog Sniff Sound Effect.mp3" id="14_iji8k"]
 
 [sub_resource type="Animation" id="Animation_qbls8"]
 length = 0.001
@@ -844,3 +845,18 @@ hframes = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=690020783]
 position = Vector2(0.25, 0)
 shape = SubResource("RectangleShape2D_tr0ro")
+
+[node name="SFX" type="Node2D" parent="." unique_id=704982939]
+
+[node name="jump_sfx" type="AudioStreamPlayer2D" parent="SFX" unique_id=1455228279]
+bus = &"Sfx"
+
+[node name="sniff_sfx" type="AudioStreamPlayer2D" parent="SFX" unique_id=1339094705]
+stream = ExtResource("14_iji8k")
+bus = &"Sfx"
+
+[node name="dig_sfx" type="AudioStreamPlayer2D" parent="SFX" unique_id=519261195]
+bus = &"Sfx"
+
+[node name="bark_sfx" type="AudioStreamPlayer2D" parent="SFX" unique_id=1703551659]
+bus = &"Sfx"
