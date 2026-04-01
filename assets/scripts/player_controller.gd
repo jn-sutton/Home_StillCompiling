@@ -13,6 +13,9 @@ var can_interact = true
 
 #for sfx
 @onready var sniff_sfx: AudioStreamPlayer2D = $SFX/sniff_sfx
+@onready var bark_sfx: AudioStreamPlayer2D = $SFX/bark_sfx
+@onready var dig_sfx: AudioStreamPlayer2D = $SFX/dig_sfx
+@onready var jump_sfx: AudioStreamPlayer2D = $SFX/jump_sfx
 
 
 
@@ -25,6 +28,9 @@ signal interacted
 func _input(event):
 	if event.is_action_pressed("jump") and is_on_floor():
 		velocity.y = jump_power * jump_multiplier
+		jump_sfx.play()
+	elif event.is_action_released("jump"):
+		jump_sfx.stop()
 	
 	if event.is_action_pressed("sniff"):
 		sniffed.emit()
@@ -35,10 +41,16 @@ func _input(event):
 	
 	if event.is_action_pressed("dig"):
 		dug.emit()
+		dig_sfx.play()
+	elif event.is_action_released("dig"):
+		dig_sfx.stop()
 		
 	
 	if event.is_action_pressed("bark"):
 		barked.emit()
+		bark_sfx.play()
+	elif event.is_action_released("bark"):
+		bark_sfx.stop()
 		
 	#talking to npc's
 	if event.is_action_pressed("interact") and can_interact:

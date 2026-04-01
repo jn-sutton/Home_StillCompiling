@@ -18,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://lnw1t082gobb" path="res://assets/scenes/objects/dirt_mound.tscn" id="14_b6xjh"]
 [ext_resource type="PackedScene" uid="uid://d3sj3kwviibii" path="res://assets/scenes/objects/acorn.tscn" id="15_gb3cm"]
 [ext_resource type="PackedScene" uid="uid://xxld6v2rm64s" path="res://assets/scenes/enemies/pigeons.tscn" id="18_21vbr"]
+[ext_resource type="AudioStream" uid="uid://cxrjcuwowdcke" path="res://assets/audio/Wanderer's Tale.mp3" id="19_i7r63"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_new3k"]
 texture = ExtResource("7_i7r63")
@@ -238,3 +239,8 @@ collision_mask = 3
 
 [node name="beginning" type="CollisionShape2D" parent="beginning_wall" index="0" unique_id=708320152]
 shape = SubResource("RectangleShape2D_21vbr")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="9" unique_id=1623032591]
+stream = ExtResource("19_i7r63")
+autoplay = true
+bus = &"Music"

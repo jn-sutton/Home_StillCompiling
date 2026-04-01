@@ -14,6 +14,9 @@
 [ext_resource type="Script" uid="uid://dp3khb1fhmjla" path="res://assets/scripts/player_animator.gd" id="10_onf58"]
 [ext_resource type="Texture2D" uid="uid://dn7i577hx4ad0" path="res://assets/sprites/players/german_shephard/dog_sniff_strip.png" id="12_2eboe"]
 [ext_resource type="AudioStream" uid="uid://sd5i0nroskby" path="res://assets/audio/Cartoon Dog Sniff Sound Effect.mp3" id="14_iji8k"]
+[ext_resource type="AudioStream" uid="uid://c0q1xpomjwwvm" path="res://assets/audio/magiaz-jump-cartoon-439679.mp3" id="14_vp0vi"]
+[ext_resource type="AudioStream" uid="uid://coj5tufx15uia" path="res://assets/audio/dragon-studio-dog-barking-406629.mp3" id="15_6wpi6"]
+[ext_resource type="AudioStream" uid="uid://b2dmwnu31d82d" path="res://assets/audio/freesound_community-digging-6691.mp3" id="15_na6hn"]
 
 [sub_resource type="Animation" id="Animation_qbls8"]
 length = 0.001
@@ -849,14 +852,21 @@ shape = SubResource("RectangleShape2D_tr0ro")
 [node name="SFX" type="Node2D" parent="." unique_id=704982939]
 
 [node name="jump_sfx" type="AudioStreamPlayer2D" parent="SFX" unique_id=1455228279]
+stream = ExtResource("14_vp0vi")
+volume_db = -15.0
 bus = &"Sfx"
 
 [node name="sniff_sfx" type="AudioStreamPlayer2D" parent="SFX" unique_id=1339094705]
 stream = ExtResource("14_iji8k")
+volume_db = -15.0
 bus = &"Sfx"
 
 [node name="dig_sfx" type="AudioStreamPlayer2D" parent="SFX" unique_id=519261195]
+stream = ExtResource("15_na6hn")
+volume_db = -18.0
 bus = &"Sfx"
 
 [node name="bark_sfx" type="AudioStreamPlayer2D" parent="SFX" unique_id=1703551659]
+stream = ExtResource("15_6wpi6")
+volume_db = -10.0
 bus = &"Sfx"
