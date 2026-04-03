@@ -51,11 +51,14 @@ sources/0 = SubResource("TileSetAtlasSource_e17s4")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mj8un"]
 size = Vector2(24, 129)
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_mj8un"]
+distance = -263.0
+
 [node name="level_2" unique_id=99358585 instance=ExtResource("1_icxrv")]
 script = ExtResource("2_ttb08")
 
 [node name="background" type="Node2D" parent="." index="0" unique_id=381891199]
-position = Vector2(36, 191)
+position = Vector2(36, 223)
 
 [node name="sky" type="Parallax2D" parent="background" index="0" unique_id=2038530511]
 scroll_scale = Vector2(0.1, 0.1)
@@ -384,6 +387,13 @@ collision_mask = 3
 [node name="beginning" type="CollisionShape2D" parent="beginning_wall" index="0" unique_id=1708965001]
 shape = SubResource("RectangleShape2D_mj8un")
 
+[node name="KillZone2" type="Area2D" parent="." index="14" unique_id=191723184]
+position = Vector2(419, 88)
+collision_layer = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KillZone2" index="0" unique_id=484669939]
+shape = SubResource("WorldBoundaryShape2D_mj8un")
+
 [connection signal="body_entered" from="boulder_area2d" to="boulder" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="rock_wall" to="." method="_on_rock_wall_body_entered"]
 [connection signal="body_exited" from="rock_wall" to="." method="_on_rock_wall_body_exited"]
@@ -403,3 +413,4 @@ shape = SubResource("RectangleShape2D_mj8un")
 [connection signal="body_entered" from="Spike_zones/spike_zone_6" to="." method="_on_spike_zone_6_body_entered"]
 [connection signal="body_entered" from="Spike_zones/spike_zone_7" to="." method="_on_spike_zone_7_body_entered"]
 [connection signal="body_entered" from="Spike_zones/spike_zone_8" to="." method="_on_spike_zone_8_body_entered"]
+[connection signal="body_entered" from="KillZone2" to="." method="_on_kill_zone_2_body_entered"]

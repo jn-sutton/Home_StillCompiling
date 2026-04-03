@@ -105,3 +105,8 @@ func _on_spike_7_body_entered(body: Node) -> void:
 func _on_spike_8_body_entered(body: Node) -> void:
 	if body.name == "German_Shephard":
 		player.die()
+
+
+func _on_kill_zone_2_body_entered(body: Node2D) -> void:
+	if body.name == "German_Shephard":
+		player.die()
