@@ -2,7 +2,7 @@
 
 extends LevelBase
 
-@export var tutorial_dialogue: DialogueResource
+@export var ending_dialogue: DialogueResource
 @onready var pigeons = $pigeons
 
 
@@ -49,3 +49,8 @@ func _on_acorn_picked_up():
 
 #func transition_to_next_level():
 #	get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")
+
+
+func _on_end_dialogue_body_entered(body: Node2D) -> void:
+	if body.name == "German_Shephard":
+		DialogueManager.show_dialogue_balloon(ending_dialogue)

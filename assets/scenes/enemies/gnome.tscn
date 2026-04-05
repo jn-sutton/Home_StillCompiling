@@ -124,6 +124,7 @@ size = Vector2(22, 15)
 collision_layer = 2
 collision_mask = 256
 script = ExtResource("1_vs5kt")
+speed = 50.0
 
 [node name="EnemyAnimator" type="Node2D" parent="." unique_id=1521808302]
 
@@ -150,3 +151,5 @@ collision_mask = 256
 [node name="WallDetectorLeft" type="RayCast2D" parent="." unique_id=366442910]
 target_position = Vector2(-14, 0)
 collision_mask = 256
+
+[connection signal="body_entered" from="PlayerDetector" to="." method="_on_player_detector_body_entered"]

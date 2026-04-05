@@ -37,7 +37,7 @@ func _physics_process(delta):
 func flip_direction():
 	direction *= -1
 	sprite.flip_h = (direction == -1)
-
+	
 
 func _on_player_detector_body_entered(body: Node2D) -> void:
 	if body is PlayerController:
