@@ -4,6 +4,8 @@ extends Node2D
 @export var animation_player : AnimationPlayer
 @export var sprite : Sprite2D
 
+var can_move = true
+
 func _process(_delta):
 	# Handle Sprite Flipping
 	if player_controller.direction != 0:

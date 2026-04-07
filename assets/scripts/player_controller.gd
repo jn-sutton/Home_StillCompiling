@@ -11,6 +11,9 @@ var can_interact = true
 #for dialogue
 @onready var actionable_finder: Area2D = $ActionableFinder
 
+# freeze player at end
+var can_move = true 
+
 #for sfx
 @onready var sniff_sfx: AudioStreamPlayer2D = $SFX/sniff_sfx
 @onready var bark_sfx: AudioStreamPlayer2D = $SFX/bark_sfx
@@ -56,9 +59,13 @@ func _input(event):
 	if event.is_action_pressed("interact") and can_interact:
 		interacted.emit()
 
-func _physics_process(delta: float) -> void:
+func _physics_process(delta: float) -> void:	
 	if not is_on_floor():
 		velocity += get_gravity() * delta
+	
+	if not can_move:
+		velocity = Vector2.ZERO
+		return
 	
 	direction = Input.get_axis("move_left", "move_right")
 	if direction:

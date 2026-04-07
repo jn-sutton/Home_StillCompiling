@@ -2,8 +2,9 @@
 
 extends LevelBase
 
-@export var ending_dialogue: DialogueResource
+@export var dialogue_resource: DialogueResource
 @onready var pigeons = $pigeons
+
 
 
 func _ready():
@@ -14,7 +15,7 @@ func _ready():
 	#	dirt_mound.object_revealed.connect(_on_object_revealed)
 	# Connect player bark to check distance
 	player.barked.connect(_on_player_barked)
-	#DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
+	DialogueManager.dialogue_ended.connect(_on_dialogue_ended)
 	
 func _on_player_barked():
 	if pigeons and is_player_near(pigeons, 200):
@@ -39,18 +40,10 @@ func _on_acorn_picked_up():
 		
 
 
-#func _on_dialogue_ended(resource):
-#	# Only open if acorn was just given
-#	if State.gave_acorn and not gate_opened:
-#		gate_opened = true
-#		open_gate()
-
-	
-
-#func transition_to_next_level():
-#	get_tree().change_scene_to_file("res://scenes/levels/level_1.tscn")
-
-
 func _on_end_dialogue_body_entered(body: Node2D) -> void:
 	if body.name == "German_Shephard":
-		DialogueManager.show_dialogue_balloon(ending_dialogue)
+		body.can_move = false
+		DialogueManager.show_dialogue_balloon(dialogue_resource, "ending_scene")
+		
+func _on_dialogue_ended(resource):
+	get_tree().change_scene_to_file("res://scenes/levels/fadeblack.tscn")

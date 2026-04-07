@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://qm6x0agckifn" path="res://assets/scenes/levels/level_base.tscn" id="1_ydnoq"]
 [ext_resource type="Script" uid="uid://djg665d5ss652" path="res://assets/scripts/levels/level_3.gd" id="2_x8kg0"]
 [ext_resource type="Texture2D" uid="uid://dwrkbqo8lyidw" path="res://assets/sprites/backgrounds/level3/1.png" id="3_ic2y8"]
+[ext_resource type="Resource" uid="uid://s0uy1kemkv0k" path="res://assets/dialogue/ending_scene.dialogue" id="3_oxuod"]
 [ext_resource type="Texture2D" uid="uid://dxtkgnaymbrww" path="res://assets/sprites/backgrounds/level3/2.png" id="4_3xxnt"]
 [ext_resource type="Texture2D" uid="uid://cfery4xuk5h8m" path="res://assets/sprites/backgrounds/level3/3.png" id="5_pv0wj"]
 [ext_resource type="Texture2D" uid="uid://b1b4s2ml4h5d0" path="res://assets/sprites/backgrounds/level3/4.png" id="6_cp335"]
@@ -60,7 +61,7 @@ size = Vector2(134, 65)
 [node name="level_3" unique_id=99358585 instance=ExtResource("1_ydnoq")]
 position = Vector2(927, -2)
 script = ExtResource("2_x8kg0")
-ending_dialogue = null
+dialogue_resource = ExtResource("3_oxuod")
 
 [node name="background" type="Node2D" parent="." index="0" unique_id=1287245847]
 position = Vector2(689, 224)
