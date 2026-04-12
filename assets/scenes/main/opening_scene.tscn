@@ -4,6 +4,42 @@
 [ext_resource type="Script" uid="uid://dm8mjejw4g1gr" path="res://assets/scripts/opening_scene.gd" id="1_xe3pj"]
 [ext_resource type="Resource" uid="uid://ccbc3ndqtkl6y" path="res://assets/dialogue/opening_scene.dialogue" id="2_jeatd"]
 
+[sub_resource type="Animation" id="Animation_jeatd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wql5m"]
+resource_name = "fade_to_black"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_cldnu"]
+_data = {
+&"RESET": SubResource("Animation_jeatd"),
+&"fade_to_black": SubResource("Animation_wql5m")
+}
+
 [node name="opening_scene" type="Node2D" unique_id=1206004074]
 script = ExtResource("1_xe3pj")
 dialogue_resource = ExtResource("2_jeatd")
@@ -14,3 +50,17 @@ offset_top = -55.0
 offset_right = 1206.0
 offset_bottom = 969.0
 texture = ExtResource("1_u2xsa")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=478350996]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=160076162]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=688819355]
+libraries/ = SubResource("AnimationLibrary_cldnu")
