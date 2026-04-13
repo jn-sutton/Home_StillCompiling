@@ -25,4 +25,4 @@ func _on_end_dialogue_body_entered(body: Node2D) -> void:
 func _on_dialogue_ended(resource):
 	animation_player.play("fade_to_black")
 	await animation_player.animation_finished
-	get_tree().change_scene_to_file("res://scenes/levels/credits.tscn")
+	get_tree().change_scene_to_file("res://assets/scenes/main/credits.tscn")
