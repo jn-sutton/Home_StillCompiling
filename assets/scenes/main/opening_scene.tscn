@@ -51,9 +51,9 @@ offset_right = 1206.0
 offset_bottom = 969.0
 texture = ExtResource("1_u2xsa")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=478350996]
+[node name="FadeToBlack" type="CanvasLayer" parent="." unique_id=478350996]
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=160076162]
+[node name="ColorRect" type="ColorRect" parent="FadeToBlack" unique_id=160076162]
 modulate = Color(1, 1, 1, 0)
 anchors_preset = 15
 anchor_right = 1.0
@@ -62,5 +62,5 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 1)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="CanvasLayer" unique_id=688819355]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FadeToBlack" unique_id=688819355]
 libraries/ = SubResource("AnimationLibrary_cldnu")

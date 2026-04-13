@@ -58,6 +58,42 @@ sources/0 = SubResource("TileSetAtlasSource_sgovl")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sgovl"]
 size = Vector2(134, 65)
 
+[sub_resource type="Animation" id="Animation_jeatd"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_wql5m"]
+resource_name = "fade_to_black"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oxuod"]
+_data = {
+&"RESET": SubResource("Animation_jeatd"),
+&"fade_to_black": SubResource("Animation_wql5m")
+}
+
 [node name="level_3" unique_id=99358585 instance=ExtResource("1_ydnoq")]
 position = Vector2(927, -2)
 script = ExtResource("2_x8kg0")
@@ -206,5 +242,19 @@ bus = &"Music"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="End_Dialogue" index="0" unique_id=1432834955]
 position = Vector2(1104, 342)
 shape = SubResource("RectangleShape2D_sgovl")
+
+[node name="FadeToBlack" type="CanvasLayer" parent="." index="13" unique_id=1560012548]
+
+[node name="ColorRect" type="ColorRect" parent="FadeToBlack" index="0" unique_id=1498929224]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="FadeToBlack" index="1" unique_id=433339310]
+libraries/ = SubResource("AnimationLibrary_oxuod")
 
 [connection signal="body_entered" from="End_Dialogue" to="." method="_on_end_dialogue_body_entered"]

@@ -3,7 +3,9 @@ extends Node2D
 @export var dialogue_resource: DialogueResource
 var dialogue_active = false
 
-@onready var animation_player = $CanvasLayer/AnimationPlayer
+@onready var animation_player: AnimationPlayer = $FadeToBlack/AnimationPlayer
+
+
 
 func _ready():
 	dialogue_active = true

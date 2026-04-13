@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://b1ig57avw72a3"]
+
+[ext_resource type="Script" uid="uid://cbe70uwuchu26" path="res://assets/scripts/credits.gd" id="1_asvie"]
+[ext_resource type="FontFile" uid="uid://b3h7cudd3fxp4" path="res://assets/fonts/Comfortaa-Bold.ttf" id="2_ht6k7"]
+
+[node name="Credits" type="Node2D" unique_id=17046055]
+script = ExtResource("1_asvie")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=999556820]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=1630666657]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="." unique_id=744484123]
+
+[node name="Label" type="Label" parent="CanvasLayer2" unique_id=704711162]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -541.0
+offset_right = 541.0
+offset_bottom = 1425.0
+grow_horizontal = 2
+size_flags_horizontal = 6
+size_flags_vertical = 6
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_ht6k7")
+theme_override_font_sizes/font_size = 24
+text = "A Game By
+
+Still Compiling
+
+
+
+
+Programming
+
+Alexander Doucette
+Jacqueline Sutton
+Mason Barnes
+
+
+
+
+Art & Animation
+
+Alexander Doucette
+Craftpix.net
+Jacqueline Sutton
+Megan Saleh
+seethingswarm
+Vlad Negară
+
+
+
+
+Music
+
+Pizza Doggy
+
+
+
+
+Special Thanks
+
+CEN4090L and Dr. Gaitros for helping us to understand what we're capable of creating.
+
+
+Thank you for playing!"
+horizontal_alignment = 1
+vertical_alignment = 1

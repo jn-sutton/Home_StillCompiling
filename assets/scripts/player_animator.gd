@@ -7,6 +7,10 @@ extends Node2D
 var can_move = true
 
 func _process(_delta):
+	# guard for freeze in last level
+	if not player_controller.can_move:
+		return
+	
 	# Handle Sprite Flipping
 	if player_controller.direction != 0:
 		sprite.flip_h = (player_controller.direction == -1)
@@ -31,3 +35,7 @@ func _process(_delta):
 	# ONLY call play if the current animation is different
 	if animation_player.current_animation != target_anim:
 		animation_player.play(target_anim)
+
+# added for freeze in last level
+func idle():
+	animation_player.play("idle")

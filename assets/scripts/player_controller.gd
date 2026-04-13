@@ -38,6 +38,7 @@ func _input(event):
 	if event.is_action_pressed("sniff"):
 		sniffed.emit()
 		sniff_sfx.play()
+		
 	# When the button is let go
 	elif event.is_action_released("sniff"):
 		sniff_sfx.stop()
