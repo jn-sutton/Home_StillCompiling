@@ -17,6 +17,7 @@
 [ext_resource type="Texture2D" uid="uid://dq2fi1f7j70si" path="res://assets/sprites/backgrounds/level1/level1_floor.png" id="11_xdltw"]
 [ext_resource type="PackedScene" uid="uid://lnw1t082gobb" path="res://assets/scenes/objects/dirt_mound.tscn" id="16_812fv"]
 [ext_resource type="PackedScene" uid="uid://crj1n66geel4b" path="res://assets/scenes/objects/bone.tscn" id="17_nhclf"]
+[ext_resource type="AudioStream" uid="uid://dccwfvocl2dsk" path="res://assets/audio/Golden Gleam.mp3" id="18_mevp3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nhclf"]
 texture = ExtResource("11_xdltw")
@@ -34,7 +35,7 @@ physics_layer_0/collision_layer = 256
 physics_layer_0/collision_mask = 0
 sources/0 = SubResource("TileSetAtlasSource_nhclf")
 
-[sub_resource type="Curve2D" id="Curve2D_nhclf"]
+[sub_resource type="Curve2D" id="Curve2D_mbfih"]
 resource_local_to_scene = true
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 226, 0)
@@ -145,7 +146,7 @@ position = Vector2(32, -40)
 
 [node name="MovingPlatformLarge" parent="." index="7" unique_id=2008875506 instance=ExtResource("5_28bgd")]
 position = Vector2(367, -108)
-curve = SubResource("Curve2D_nhclf")
+curve = SubResource("Curve2D_mbfih")
 
 [node name="Porcupine" parent="." index="8" unique_id=902211001 instance=ExtResource("3_m0dby")]
 position = Vector2(410, -39)
@@ -179,6 +180,11 @@ collision_mask = 3
 
 [node name="beginning" type="CollisionShape2D" parent="beginning_wall" index="0" unique_id=535201376]
 shape = SubResource("RectangleShape2D_nhclf")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." index="16" unique_id=1482326521]
+stream = ExtResource("18_mevp3")
+autoplay = true
+bus = &"Music"
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
 [connection signal="body_entered" from="KillZone2" to="." method="_on_kill_zone_body_entered"]
